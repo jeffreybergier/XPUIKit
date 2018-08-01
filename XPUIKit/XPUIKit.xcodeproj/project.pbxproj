@@ -11,12 +11,6 @@
 		50B7602921126786001F042F /* XPUIKit_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B7601B21126786001F042F /* XPUIKit_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50B7603E211267B0001F042F /* XPUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B76035211267B0001F042F /* XPUIKit.framework */; };
 		50B76045211267B0001F042F /* XPUIKit_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B76037211267B0001F042F /* XPUIKit_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		50B7604F21126815001F042F /* TestClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B7604D21126815001F042F /* TestClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		50B7605021126815001F042F /* TestClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B7604D21126815001F042F /* TestClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		50B7605121126815001F042F /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B7604E21126815001F042F /* TestClass.m */; };
-		50B7605221126815001F042F /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B7604E21126815001F042F /* TestClass.m */; };
-		50B76056211268B0001F042F /* TestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B76055211268A6001F042F /* TestTest.swift */; };
-		50B76057211268B0001F042F /* TestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B76055211268A6001F042F /* TestTest.swift */; };
 		50B76058211268BD001F042F /* XPUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B760532112682C001F042F /* XPUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50B76059211268BD001F042F /* XPUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B760532112682C001F042F /* XPUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -49,10 +43,7 @@
 		50B76038211267B0001F042F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50B7603D211267B0001F042F /* XPUIKit_macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XPUIKit_macOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50B76044211267B0001F042F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		50B7604D21126815001F042F /* TestClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestClass.h; sourceTree = "<group>"; };
-		50B7604E21126815001F042F /* TestClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestClass.m; sourceTree = "<group>"; };
 		50B760532112682C001F042F /* XPUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPUIKit.h; sourceTree = "<group>"; };
-		50B76055211268A6001F042F /* TestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,8 +142,6 @@
 			isa = PBXGroup;
 			children = (
 				50B760532112682C001F042F /* XPUIKit.h */,
-				50B7604D21126815001F042F /* TestClass.h */,
-				50B7604E21126815001F042F /* TestClass.m */,
 			);
 			path = XPUIKit_shared;
 			sourceTree = "<group>";
@@ -160,7 +149,6 @@
 		50B7605421126873001F042F /* XPUIKit_shared_tests */ = {
 			isa = PBXGroup;
 			children = (
-				50B76055211268A6001F042F /* TestTest.swift */,
 			);
 			path = XPUIKit_shared_tests;
 			sourceTree = "<group>";
@@ -174,7 +162,6 @@
 			files = (
 				50B7602921126786001F042F /* XPUIKit_iOS.h in Headers */,
 				50B76058211268BD001F042F /* XPUIKit.h in Headers */,
-				50B7604F21126815001F042F /* TestClass.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,7 +171,6 @@
 			files = (
 				50B76045211267B0001F042F /* XPUIKit_macOS.h in Headers */,
 				50B76059211268BD001F042F /* XPUIKit.h in Headers */,
-				50B7605021126815001F042F /* TestClass.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,7 +327,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50B7605121126815001F042F /* TestClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,7 +334,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50B76056211268B0001F042F /* TestTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,7 +341,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50B7605221126815001F042F /* TestClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,7 +348,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50B76057211268B0001F042F /* TestTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
