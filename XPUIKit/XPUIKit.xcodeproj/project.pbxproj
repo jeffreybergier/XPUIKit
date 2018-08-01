@@ -13,6 +13,8 @@
 		50B76045211267B0001F042F /* XPUIKit_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B76037211267B0001F042F /* XPUIKit_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50B76058211268BD001F042F /* XPUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B760532112682C001F042F /* XPUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50B76059211268BD001F042F /* XPUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B760532112682C001F042F /* XPUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50B7605B21126A6F001F042F /* XPUIProtocols.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B7605A21126A6F001F042F /* XPUIProtocols.h */; };
+		50B7605C21126A6F001F042F /* XPUIProtocols.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B7605A21126A6F001F042F /* XPUIProtocols.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,7 @@
 		50B7603D211267B0001F042F /* XPUIKit_macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XPUIKit_macOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50B76044211267B0001F042F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50B760532112682C001F042F /* XPUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPUIKit.h; sourceTree = "<group>"; };
+		50B7605A21126A6F001F042F /* XPUIProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPUIProtocols.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				50B760532112682C001F042F /* XPUIKit.h */,
+				50B7605A21126A6F001F042F /* XPUIProtocols.h */,
 			);
 			path = XPUIKit_shared;
 			sourceTree = "<group>";
@@ -162,6 +166,7 @@
 			files = (
 				50B7602921126786001F042F /* XPUIKit_iOS.h in Headers */,
 				50B76058211268BD001F042F /* XPUIKit.h in Headers */,
+				50B7605B21126A6F001F042F /* XPUIProtocols.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +176,7 @@
 			files = (
 				50B76045211267B0001F042F /* XPUIKit_macOS.h in Headers */,
 				50B76059211268BD001F042F /* XPUIKit.h in Headers */,
+				50B7605C21126A6F001F042F /* XPUIProtocols.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
