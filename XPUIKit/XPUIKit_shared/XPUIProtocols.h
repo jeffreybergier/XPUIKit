@@ -27,7 +27,58 @@
 //  SOFTWARE.
 //
 //
-
+#if TARGET_OS_IPHONE
+@import UIKit;
+#else
+@import AppKit;
+#endif
 @import Foundation;
 
+
+@protocol XPUIImage
+@end
+
+@protocol XPUIColor
+@property (readonly, nonatomic) CGColorRef xp_cgColor;
+@end
+
+@protocol XPUILayoutGuide
+@property (readonly, strong) NSLayoutXAxisAnchor *leadingAnchor;
+@property (readonly, strong) NSLayoutXAxisAnchor *trailingAnchor;
+@property (readonly, strong) NSLayoutYAxisAnchor *topAnchor;
+@property (readonly, strong) NSLayoutYAxisAnchor *bottomAnchor;
+@property (readonly, strong) NSLayoutDimension *widthAnchor;
+@property (readonly, strong) NSLayoutDimension *heightAnchor;
+@property (readonly, strong) NSLayoutXAxisAnchor *centerXAnchor;
+@property (readonly, strong) NSLayoutYAxisAnchor *centerYAnchor;
+@end
+
+@protocol XPUIToolbarItemContext
+@end
+
+@protocol XPUIToolbarContext
+@property NSArray<id<XPUIToolbarContext>>* _Nonnull backgroundColor;
+@end
+
+@protocol XPUIViewContext // NS/UI/View
+@property (nonatomic) CGFloat xp_alpha;
+@property (nonatomic, strong) id<XPUIColor> _Nonnull xp_backgroundColor;
+@property (readonly, nonatomic, strong) id<XPUILayoutGuide> _Nonnull xp_safeAreaLayoutGuide;
+@end
+
+@protocol XPUIViewControllerContext // NS/UI/ViewController
+@property (nonatomic, strong) id<XPUIViewContext> _Nonnull xp_rootView;
+@property (readonly, nonatomic, strong) id<XPUILayoutGuide> _Nonnull xp_safeAreaLayoutGuide;
+@end
+
+@protocol XPUIPresentationContext // NSWindow and UIViewController (when used for presentation)
+@property (nonatomic, strong) id<XPUIViewControllerContext> _Nonnull rootViewController;
+@property (nonatomic, strong) id<XPUIToolbarContext> _Nullable toolbar;
+@end
+
+@protocol XPUIListContext // NS/UI/TableView
+@end
+
+@protocol XPUIMasterDetailContext <XPUIViewControllerContext> // NS/UI/TableView
+@end
 
