@@ -26,6 +26,8 @@
 		50147C95211372BE00788F19 /* XPUIView.h in Headers */ = {isa = PBXBuildFile; fileRef = 50147C92211372BE00788F19 /* XPUIView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50147C9A2113742700788F19 /* XPUIView_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 50147C982113742700788F19 /* XPUIView_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50147C9B2113742700788F19 /* XPUIView_macOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 50147C992113742700788F19 /* XPUIView_macOS.m */; };
+		50147CA22113A58E00788F19 /* UILayoutGuide.h in Headers */ = {isa = PBXBuildFile; fileRef = 50147CA02113A58E00788F19 /* UILayoutGuide.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50147CA32113A58E00788F19 /* UILayoutGuide.m in Sources */ = {isa = PBXBuildFile; fileRef = 50147CA12113A58E00788F19 /* UILayoutGuide.m */; };
 		50B7602221126786001F042F /* XPUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B7601821126786001F042F /* XPUIKit.framework */; };
 		50B7602921126786001F042F /* XPUIKit_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B7601B21126786001F042F /* XPUIKit_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50B7603E211267B0001F042F /* XPUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B76035211267B0001F042F /* XPUIKit.framework */; };
@@ -90,6 +92,8 @@
 		50147C92211372BE00788F19 /* XPUIView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPUIView.h; sourceTree = "<group>"; };
 		50147C982113742700788F19 /* XPUIView_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPUIView_macOS.h; sourceTree = "<group>"; };
 		50147C992113742700788F19 /* XPUIView_macOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPUIView_macOS.m; sourceTree = "<group>"; };
+		50147CA02113A58E00788F19 /* UILayoutGuide.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UILayoutGuide.h; sourceTree = "<group>"; };
+		50147CA12113A58E00788F19 /* UILayoutGuide.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UILayoutGuide.m; sourceTree = "<group>"; };
 		50B7601821126786001F042F /* XPUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XPUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50B7601B21126786001F042F /* XPUIKit_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPUIKit_iOS.h; sourceTree = "<group>"; };
 		50B7601C21126786001F042F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -205,6 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				50B76037211267B0001F042F /* XPUIKit_macOS.h */,
+				50147CA02113A58E00788F19 /* UILayoutGuide.h */,
+				50147CA12113A58E00788F19 /* UILayoutGuide.m */,
 				50147C982113742700788F19 /* XPUIView_macOS.h */,
 				50147C992113742700788F19 /* XPUIView_macOS.m */,
 				50147C8E2112B8AA00788F19 /* XPUIViewController_macOS.h */,
@@ -265,6 +271,7 @@
 				50147C7D2112AD5900788F19 /* XPUIPresentation_macOS.h in Headers */,
 				50147C95211372BE00788F19 /* XPUIView.h in Headers */,
 				50147C9A2113742700788F19 /* XPUIView_macOS.h in Headers */,
+				50147CA22113A58E00788F19 /* UILayoutGuide.h in Headers */,
 				50B76045211267B0001F042F /* XPUIKit_macOS.h in Headers */,
 				50147C902112B8AA00788F19 /* XPUIViewController_macOS.h in Headers */,
 				50B76059211268BD001F042F /* XPUIKit.h in Headers */,
@@ -484,6 +491,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50147CA32113A58E00788F19 /* UILayoutGuide.m in Sources */,
 				50147C9B2113742700788F19 /* XPUIView_macOS.m in Sources */,
 				50147C912112B8AA00788F19 /* XPUIViewController_macOS.m in Sources */,
 				50147C7E2112AD5900788F19 /* XPUIPresentation_macOS.m in Sources */,

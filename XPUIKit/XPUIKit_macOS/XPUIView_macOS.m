@@ -29,23 +29,46 @@
 //
 
 #import "XPUIView_macOS.h"
+#import "UILayoutGuide.h"
 
 @interface XPUIView_macOS ()
-@property (strong, nonatomic) NSLayoutGuide* __xp_layoutGuide;
 @end
 
 @implementation XPUIView_macOS
 
-@dynamic xp_layoutGuide, xp_layer;
+@dynamic xp_layer;
+
+- (instancetype)init
+{
+    self = [super init];
+    [self commonInit];
+    return self;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    [self commonInit];
+    return self;
+}
+
+- (instancetype)initWithFrame:(NSRect)frameRect;
+{
+    self = [super initWithFrame:frameRect];
+    [self commonInit];
+    return self;
+}
+
+- (void)commonInit;
+{
+    [self setWantsLayer:YES];
+    [self setTranslatesAutoresizingMaskIntoConstraints:NO];
+    self->_xp_layoutGuide = [[UILayoutGuide alloc] initWithOwningView:self];
+}
 
 - (CALayer *)xp_layer;
 {
     return [self layer];
-}
-
-- (NSLayoutGuide* _Nonnull)xp_layoutGuide;
-{
-    return [[self layoutGuides] firstObject];
 }
 
 - (void)xp_addSubview:(id<XPUIView> _Nonnull)view;
@@ -61,24 +84,12 @@
 - (void)viewDidMoveToWindow;
 {
     [super viewDidMoveToWindow];
-    [self setWantsLayer:YES];
-
-    NSLayoutGuide* lg = [[NSLayoutGuide alloc] init];
-    [self set__xp_layoutGuide:lg];
-    [self addLayoutGuide:lg];
-    [NSLayoutConstraint activateConstraints: @[
-                                               [[self centerXAnchor] constraintEqualToAnchor:[lg centerXAnchor]],
-                                               [[self centerYAnchor] constraintEqualToAnchor:[lg centerYAnchor]],
-                                               [[self heightAnchor] constraintEqualToAnchor:[lg heightAnchor]],
-                                               [[self widthAnchor] constraintEqualToAnchor:[lg widthAnchor]]
-                                               ]];
     [[self xp_delegate] viewDidMoveToPresentation:self];
 }
 
 - (void)layout;
 {
     [super layout];
-    NSLog(@"%@", NSStringFromRect([[self __xp_layoutGuide] frame]));
     [[self xp_delegate] viewDidLayout:self];
 }
 
