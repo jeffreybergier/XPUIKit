@@ -30,30 +30,62 @@
 
 #import "XPUIView_macOS.h"
 
+@interface XPUIView_macOS ()
+@property (strong, nonatomic) NSLayoutGuide* __xp_layoutGuide;
+@end
+
 @implementation XPUIView_macOS
-@dynamic xp_layoutGuide;
+
+@dynamic xp_layoutGuide, xp_layer;
+
+- (CALayer *)xp_layer;
+{
+    return [self layer];
+}
 
 - (NSLayoutGuide* _Nonnull)xp_layoutGuide;
 {
     return [[self layoutGuides] firstObject];
 }
 
+- (void)xp_addSubview:(id<XPUIView> _Nonnull)view;
+{
+    [self addSubview:view];
+}
+
++ (BOOL)requiresConstraintBasedLayout;
+{
+    return YES;
+}
+
 - (void)viewDidMoveToWindow;
 {
     [super viewDidMoveToWindow];
+    [self setWantsLayer:YES];
+
+    NSLayoutGuide* lg = [[NSLayoutGuide alloc] init];
+    [self set__xp_layoutGuide:lg];
+    [self addLayoutGuide:lg];
+    [NSLayoutConstraint activateConstraints: @[
+                                               [[self centerXAnchor] constraintEqualToAnchor:[lg centerXAnchor]],
+                                               [[self centerYAnchor] constraintEqualToAnchor:[lg centerYAnchor]],
+                                               [[self heightAnchor] constraintEqualToAnchor:[lg heightAnchor]],
+                                               [[self widthAnchor] constraintEqualToAnchor:[lg widthAnchor]]
+                                               ]];
     [[self xp_delegate] viewDidMoveToPresentation:self];
 }
 
 - (void)layout;
 {
     [super layout];
+    NSLog(@"%@", NSStringFromRect([[self __xp_layoutGuide] frame]));
     [[self xp_delegate] viewDidLayout:self];
 }
 
 @end
 
 @implementation XPUIViewCreator
-+ (id<XPUIView> _Nonnull)createViewWithDelegate:(id<XPUIViewDelegate> _Nonnull)delegate;
++ (id<XPUIView> _Nonnull)createViewWithDelegate:(id<XPUIViewDelegate> _Nullable)delegate;
 {
     id view = [[XPUIView_macOS alloc] init];
     [view setXp_delegate:delegate];

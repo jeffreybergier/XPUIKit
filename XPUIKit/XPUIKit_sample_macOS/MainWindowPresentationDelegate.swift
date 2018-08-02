@@ -30,7 +30,10 @@
 
 import XPUIKit
 
-class MainWindowPresentationDelegate { }
+class MainWindowPresentationDelegate {
+
+    let blueSubview = XPUIViewCreator.createView(with: nil)
+}
 
 extension MainWindowPresentationDelegate: XPUIPresentationDelegate {
     func provideViewController(for presentation: XPUIPresentation) -> XPUIViewController {
@@ -54,6 +57,13 @@ extension MainWindowPresentationDelegate: XPUIViewControllerDelegate {
 extension MainWindowPresentationDelegate: XPUIViewDelegate {
     func viewDidMove(toPresentation view: XPUIView) {
         print("View: viewDidMoveToPresentation")
+        view.xp_layer.backgroundColor = CGColor(red: 1, green: 0, blue: 0, alpha: 1)
+        view.xp_addSubview(self.blueSubview)
+        self.blueSubview.xp_layer.backgroundColor = CGColor(red: 0, green: 0, blue: 1, alpha: 1)
+        view.xp_layoutGuide.leadingAnchor.constraint(equalTo: self.blueSubview.xp_layoutGuide.leadingAnchor, constant: 100).isActive = true
+        view.xp_layoutGuide.trailingAnchor.constraint(equalTo: self.blueSubview.xp_layoutGuide.trailingAnchor, constant: 100).isActive = true
+        view.xp_layoutGuide.topAnchor.constraint(equalTo: self.blueSubview.xp_layoutGuide.topAnchor, constant: 100).isActive = true
+        view.xp_layoutGuide.bottomAnchor.constraint(equalTo: self.blueSubview.xp_layoutGuide.bottomAnchor, constant: 100).isActive = true
     }
 
     func viewDidLayout(_ view: XPUIView) {

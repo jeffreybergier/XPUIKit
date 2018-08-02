@@ -34,8 +34,10 @@
 @interface XPUIView_macOS: NSView <XPUIView>
 @property (nonatomic, strong) id<XPUIViewDelegate> _Nullable xp_delegate;
 @property (readonly, nonatomic, strong) NSLayoutGuide* _Nonnull xp_layoutGuide;
+@property (readonly, nonatomic, strong) CALayer* _Nonnull xp_layer;
+- (void)xp_addSubview:(id<XPUIView> _Nonnull)view;
 @end
 
 @interface XPUIViewCreator: NSObject
-+ (id<XPUIView> _Nonnull)createViewWithDelegate:(id<XPUIViewDelegate> _Nonnull)delegate;
++ (id<XPUIView> _Nonnull)createViewWithDelegate:(id<XPUIViewDelegate> _Nullable)delegate;
 @end
