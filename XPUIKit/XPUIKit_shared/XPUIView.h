@@ -50,3 +50,7 @@
 @property (readonly, nonatomic, strong) CALayer* _Nonnull xp_layer;
 - (void)xp_addSubview:(id<XPUIView> _Nonnull)view;
 @end
+
+@protocol XPUILabel <XPUIView>
+@property (nonatomic, strong) NSAttributedString* _Nullable xp_attributedString;
+@end

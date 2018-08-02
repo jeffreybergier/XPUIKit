@@ -30,6 +30,7 @@
 
 @import AppKit;
 #import "XPUIView.h"
+@import Aspects;
 
 @interface XPUIView_macOS: NSView <XPUIView>
 @property (nonatomic, strong) id<XPUIViewDelegate> _Nullable xp_delegate;

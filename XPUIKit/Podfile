@@ -1,0 +1,31 @@
+# Uncomment the next line to define a global platform for your project
+
+target 'XPUIKit_sample_macOS' do
+	platform :osx, '10.13'
+  	use_frameworks!
+	inherit! :search_paths
+end
+
+target 'XPUIKit_iOS' do
+	platform :ios, '11.0'
+  	use_frameworks!
+
+	pod 'Aspects'
+
+  	target 'XPUIKit_iOSTests' do
+    	inherit! :search_paths
+    	# Pods for testing
+  	end
+end
+
+target 'XPUIKit_macOS' do
+	platform :osx, '10.11'
+  	use_frameworks!
+
+	pod 'Aspects'
+
+  	target 'XPUIKit_macOSTests' do
+    	inherit! :search_paths
+    	# Pods for testing
+  	end
+end
