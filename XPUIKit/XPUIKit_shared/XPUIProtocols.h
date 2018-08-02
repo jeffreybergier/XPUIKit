@@ -27,13 +27,12 @@
 //  SOFTWARE.
 //
 //
+
 #if TARGET_OS_IPHONE
 @import UIKit;
 #else
 @import AppKit;
 #endif
-@import Foundation;
-
 
 @protocol XPUIImage
 @end
@@ -43,14 +42,14 @@
 @end
 
 @protocol XPUILayoutGuide
-@property (readonly, strong) NSLayoutXAxisAnchor *leadingAnchor;
-@property (readonly, strong) NSLayoutXAxisAnchor *trailingAnchor;
-@property (readonly, strong) NSLayoutYAxisAnchor *topAnchor;
-@property (readonly, strong) NSLayoutYAxisAnchor *bottomAnchor;
-@property (readonly, strong) NSLayoutDimension *widthAnchor;
-@property (readonly, strong) NSLayoutDimension *heightAnchor;
-@property (readonly, strong) NSLayoutXAxisAnchor *centerXAnchor;
-@property (readonly, strong) NSLayoutYAxisAnchor *centerYAnchor;
+@property (readonly, strong) NSLayoutXAxisAnchor* leadingAnchor;
+@property (readonly, strong) NSLayoutXAxisAnchor* trailingAnchor;
+@property (readonly, strong) NSLayoutYAxisAnchor* topAnchor;
+@property (readonly, strong) NSLayoutYAxisAnchor* bottomAnchor;
+@property (readonly, strong) NSLayoutDimension* widthAnchor;
+@property (readonly, strong) NSLayoutDimension* heightAnchor;
+@property (readonly, strong) NSLayoutXAxisAnchor* centerXAnchor;
+@property (readonly, strong) NSLayoutYAxisAnchor* centerYAnchor;
 @end
 
 @protocol XPUIToolbarItemContext
@@ -71,14 +70,8 @@
 @property (readonly, nonatomic, strong) id<XPUILayoutGuide> _Nonnull xp_safeAreaLayoutGuide;
 @end
 
-@protocol XPUIPresentationContext // NSWindow and UIViewController (when used for presentation)
-@property (nonatomic, strong) id<XPUIViewControllerContext> _Nonnull rootViewController;
-@property (nonatomic, strong) id<XPUIToolbarContext> _Nullable toolbar;
-@end
-
 @protocol XPUIListContext // NS/UI/TableView
 @end
 
 @protocol XPUIMasterDetailContext <XPUIViewControllerContext> // NS/UI/TableView
 @end
-

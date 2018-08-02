@@ -1,6 +1,6 @@
 //
-//  XPUIKit_macOS.h
-//  XPUIKit_macOS
+//  XPUIPresentationContext.h
+//  XPUIKit
 //
 //  Created by Jeffrey Bergier on 01/08/2018.
 //
@@ -28,14 +28,18 @@
 //
 //
 
-@import AppKit;
+@import Foundation;
+#import "XPUIProtocols.h"
 
-//! Project version number for XPUIKit_macOS.
-FOUNDATION_EXPORT double XPUIKit_macOSVersionNumber;
+@protocol XPUIPresentationDelegate
+- (id<XPUIViewControllerContext> _Nonnull)provideViewControllerContextForPresentationContext:(id _Nonnull)presentation;
+@end
 
-//! Project version string for XPUIKit_macOS.
-FOUNDATION_EXPORT const unsigned char XPUIKit_macOSVersionString[];
+@protocol XPUIPresentation // NSWindow and UIViewController (when used for presentation)
+@property (readonly, nonatomic, strong) id<XPUIViewControllerContext> _Nonnull xp_rootViewController;
+@property (nonatomic, strong) id<XPUIPresentationDelegate> _Nonnull xp_delegate;
+@end
 
-// In this header, you should import all the public headers of your framework using statements like #import <XPUIKit_macOS/PublicHeader.h>
-#import <XPUIKit/XPUIWindowController.h>
-
+@interface XPUIPresentationCreator: NSObject
++ (id<XPUIPresentation> _Nonnull)createPresentationWithDelegate:(id<XPUIPresentationDelegate> _Nonnull)delegate;
+@end

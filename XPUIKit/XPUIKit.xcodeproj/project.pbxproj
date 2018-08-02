@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50147C6A2112AB6D00788F19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50147C692112AB6D00788F19 /* AppDelegate.swift */; };
+		50147C6C2112AB6F00788F19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50147C6B2112AB6F00788F19 /* Assets.xcassets */; };
+		50147C6F2112AB6F00788F19 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50147C6D2112AB6F00788F19 /* MainMenu.xib */; };
+		50147C772112ABEA00788F19 /* XPUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B76035211267B0001F042F /* XPUIKit.framework */; };
+		50147C782112ABEA00788F19 /* XPUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50B76035211267B0001F042F /* XPUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		50147C7D2112AD5900788F19 /* XPUIWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 50147C7A2112AD5900788F19 /* XPUIWindowController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50147C7E2112AD5900788F19 /* XPUIWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50147C7B2112AD5900788F19 /* XPUIWindowController.m */; };
+		50147C7F2112AD5900788F19 /* XPUIWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50147C7C2112AD5900788F19 /* XPUIWindowController.xib */; };
+		50147C812112AEA200788F19 /* XPUIPresentation.h in Headers */ = {isa = PBXBuildFile; fileRef = 50147C802112AEA200788F19 /* XPUIPresentation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50147C822112AEA200788F19 /* XPUIPresentation.h in Headers */ = {isa = PBXBuildFile; fileRef = 50147C802112AEA200788F19 /* XPUIPresentation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50147C842112B19100788F19 /* XPUIPresentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 50147C832112B19100788F19 /* XPUIPresentation.m */; };
+		50147C852112B1A200788F19 /* XPUIPresentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 50147C832112B19100788F19 /* XPUIPresentation.m */; };
+		50147C872112B33F00788F19 /* MainWindowPresentationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50147C862112B33F00788F19 /* MainWindowPresentationDelegate.swift */; };
 		50B7602221126786001F042F /* XPUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B7601821126786001F042F /* XPUIKit.framework */; };
 		50B7602921126786001F042F /* XPUIKit_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B7601B21126786001F042F /* XPUIKit_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50B7603E211267B0001F042F /* XPUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B76035211267B0001F042F /* XPUIKit.framework */; };
@@ -15,16 +28,16 @@
 		50B76059211268BD001F042F /* XPUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B760532112682C001F042F /* XPUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50B7605B21126A6F001F042F /* XPUIProtocols.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B7605A21126A6F001F042F /* XPUIProtocols.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50B7605C21126A6F001F042F /* XPUIProtocols.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B7605A21126A6F001F042F /* XPUIProtocols.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		50B7605F21126E57001F042F /* XPUIView_BasicTests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B7605D21126E30001F042F /* XPUIView_BasicTests_macOS.swift */; };
-		50B76068211272CE001F042F /* XPUIView_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B76066211272CE001F042F /* XPUIView_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		50B76069211272CE001F042F /* XPUIView_macOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B76067211272CE001F042F /* XPUIView_macOS.m */; };
-		50B7606C211275BE001F042F /* NSColor+XPUI_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B7606A211275BE001F042F /* NSColor+XPUI_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		50B7606D211275BE001F042F /* NSColor+XPUI_macOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B7606B211275BE001F042F /* NSColor+XPUI_macOS.m */; };
-		50B7607021127775001F042F /* NSLayoutGuide+XPUI_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B7606E21127775001F042F /* NSLayoutGuide+XPUI_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		50B7607121127775001F042F /* NSLayoutGuide+XPUI_macOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B7606F21127775001F042F /* NSLayoutGuide+XPUI_macOS.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		50147C752112ABDF00788F19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50B7600D21126774001F042F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50B76034211267B0001F042F;
+			remoteInfo = XPUIKit_macOS;
+		};
 		50B7602321126786001F042F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 50B7600D21126774001F042F /* Project object */;
@@ -41,7 +54,33 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		50147C792112ABEA00788F19 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				50147C782112ABEA00788F19 /* XPUIKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		50147C672112AB6D00788F19 /* XPUIKit Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XPUIKit Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		50147C692112AB6D00788F19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		50147C6B2112AB6F00788F19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		50147C6E2112AB6F00788F19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		50147C702112AB6F00788F19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50147C712112AB6F00788F19 /* XPUIKit_sample_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XPUIKit_sample_macOS.entitlements; sourceTree = "<group>"; };
+		50147C7A2112AD5900788F19 /* XPUIWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPUIWindowController.h; sourceTree = "<group>"; };
+		50147C7B2112AD5900788F19 /* XPUIWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPUIWindowController.m; sourceTree = "<group>"; };
+		50147C7C2112AD5900788F19 /* XPUIWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XPUIWindowController.xib; sourceTree = "<group>"; };
+		50147C802112AEA200788F19 /* XPUIPresentation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPUIPresentation.h; sourceTree = "<group>"; };
+		50147C832112B19100788F19 /* XPUIPresentation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPUIPresentation.m; sourceTree = "<group>"; };
+		50147C862112B33F00788F19 /* MainWindowPresentationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowPresentationDelegate.swift; sourceTree = "<group>"; };
 		50B7601821126786001F042F /* XPUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XPUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50B7601B21126786001F042F /* XPUIKit_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPUIKit_iOS.h; sourceTree = "<group>"; };
 		50B7601C21126786001F042F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,16 +93,17 @@
 		50B76044211267B0001F042F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50B760532112682C001F042F /* XPUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPUIKit.h; sourceTree = "<group>"; };
 		50B7605A21126A6F001F042F /* XPUIProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPUIProtocols.h; sourceTree = "<group>"; };
-		50B7605D21126E30001F042F /* XPUIView_BasicTests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPUIView_BasicTests_macOS.swift; sourceTree = "<group>"; };
-		50B76066211272CE001F042F /* XPUIView_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = XPUIView_macOS.h; path = XPUIKit_macOS/XPUIView_macOS.h; sourceTree = SOURCE_ROOT; };
-		50B76067211272CE001F042F /* XPUIView_macOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = XPUIView_macOS.m; path = XPUIKit_macOS/XPUIView_macOS.m; sourceTree = SOURCE_ROOT; };
-		50B7606A211275BE001F042F /* NSColor+XPUI_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSColor+XPUI_macOS.h"; sourceTree = "<group>"; };
-		50B7606B211275BE001F042F /* NSColor+XPUI_macOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSColor+XPUI_macOS.m"; sourceTree = "<group>"; };
-		50B7606E21127775001F042F /* NSLayoutGuide+XPUI_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSLayoutGuide+XPUI_macOS.h"; sourceTree = "<group>"; };
-		50B7606F21127775001F042F /* NSLayoutGuide+XPUI_macOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutGuide+XPUI_macOS.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		50147C642112AB6D00788F19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50147C772112ABEA00788F19 /* XPUIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		50B7601521126786001F042F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -97,9 +137,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50147C682112AB6D00788F19 /* XPUIKit_sample_macOS */ = {
+			isa = PBXGroup;
+			children = (
+				50147C692112AB6D00788F19 /* AppDelegate.swift */,
+				50147C862112B33F00788F19 /* MainWindowPresentationDelegate.swift */,
+				50147C6B2112AB6F00788F19 /* Assets.xcassets */,
+				50147C6D2112AB6F00788F19 /* MainMenu.xib */,
+				50147C702112AB6F00788F19 /* Info.plist */,
+				50147C712112AB6F00788F19 /* XPUIKit_sample_macOS.entitlements */,
+			);
+			path = XPUIKit_sample_macOS;
+			sourceTree = "<group>";
+		};
 		50B7600C21126774001F042F = {
 			isa = PBXGroup;
 			children = (
+				50147C682112AB6D00788F19 /* XPUIKit_sample_macOS */,
 				50B7604C211267F2001F042F /* XPUIKit_shared */,
 				50B7605421126873001F042F /* XPUIKit_shared_tests */,
 				50B7601A21126786001F042F /* XPUIKit_iOS */,
@@ -117,6 +171,7 @@
 				50B7602121126786001F042F /* XPUIKit_iOSTests.xctest */,
 				50B76035211267B0001F042F /* XPUIKit.framework */,
 				50B7603D211267B0001F042F /* XPUIKit_macOSTests.xctest */,
+				50147C672112AB6D00788F19 /* XPUIKit Sample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,12 +197,9 @@
 			isa = PBXGroup;
 			children = (
 				50B76037211267B0001F042F /* XPUIKit_macOS.h */,
-				50B76066211272CE001F042F /* XPUIView_macOS.h */,
-				50B76067211272CE001F042F /* XPUIView_macOS.m */,
-				50B7606A211275BE001F042F /* NSColor+XPUI_macOS.h */,
-				50B7606B211275BE001F042F /* NSColor+XPUI_macOS.m */,
-				50B7606E21127775001F042F /* NSLayoutGuide+XPUI_macOS.h */,
-				50B7606F21127775001F042F /* NSLayoutGuide+XPUI_macOS.m */,
+				50147C7A2112AD5900788F19 /* XPUIWindowController.h */,
+				50147C7B2112AD5900788F19 /* XPUIWindowController.m */,
+				50147C7C2112AD5900788F19 /* XPUIWindowController.xib */,
 				50B76038211267B0001F042F /* Info.plist */,
 			);
 			path = XPUIKit_macOS;
@@ -156,7 +208,6 @@
 		50B76041211267B0001F042F /* XPUIKit_macOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				50B7605D21126E30001F042F /* XPUIView_BasicTests_macOS.swift */,
 				50B76044211267B0001F042F /* Info.plist */,
 			);
 			path = XPUIKit_macOSTests;
@@ -167,6 +218,8 @@
 			children = (
 				50B760532112682C001F042F /* XPUIKit.h */,
 				50B7605A21126A6F001F042F /* XPUIProtocols.h */,
+				50147C802112AEA200788F19 /* XPUIPresentation.h */,
+				50147C832112B19100788F19 /* XPUIPresentation.m */,
 			);
 			path = XPUIKit_shared;
 			sourceTree = "<group>";
@@ -187,6 +240,7 @@
 			files = (
 				50B7602921126786001F042F /* XPUIKit_iOS.h in Headers */,
 				50B76058211268BD001F042F /* XPUIKit.h in Headers */,
+				50147C812112AEA200788F19 /* XPUIPresentation.h in Headers */,
 				50B7605B21126A6F001F042F /* XPUIProtocols.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,11 +249,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50147C7D2112AD5900788F19 /* XPUIWindowController.h in Headers */,
 				50B76045211267B0001F042F /* XPUIKit_macOS.h in Headers */,
-				50B7606C211275BE001F042F /* NSColor+XPUI_macOS.h in Headers */,
-				50B7607021127775001F042F /* NSLayoutGuide+XPUI_macOS.h in Headers */,
-				50B76068211272CE001F042F /* XPUIView_macOS.h in Headers */,
 				50B76059211268BD001F042F /* XPUIKit.h in Headers */,
+				50147C822112AEA200788F19 /* XPUIPresentation.h in Headers */,
 				50B7605C21126A6F001F042F /* XPUIProtocols.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,6 +260,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		50147C662112AB6D00788F19 /* XPUIKit_sample_macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50147C722112AB6F00788F19 /* Build configuration list for PBXNativeTarget "XPUIKit_sample_macOS" */;
+			buildPhases = (
+				50147C632112AB6D00788F19 /* Sources */,
+				50147C642112AB6D00788F19 /* Frameworks */,
+				50147C652112AB6D00788F19 /* Resources */,
+				50147C792112ABEA00788F19 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50147C762112ABDF00788F19 /* PBXTargetDependency */,
+			);
+			name = XPUIKit_sample_macOS;
+			productName = XPUIKit_sample_macOS;
+			productReference = 50147C672112AB6D00788F19 /* XPUIKit Sample.app */;
+			productType = "com.apple.product-type.application";
+		};
 		50B7601721126786001F042F /* XPUIKit_iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50B7602A21126786001F042F /* Build configuration list for PBXNativeTarget "XPUIKit_iOS" */;
@@ -285,8 +357,12 @@
 		50B7600D21126774001F042F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 1000;
 				TargetAttributes = {
+					50147C662112AB6D00788F19 = {
+						CreatedOnToolsVersion = 10.0;
+					};
 					50B7601721126786001F042F = {
 						CreatedOnToolsVersion = 10.0;
 					};
@@ -307,6 +383,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 50B7600C21126774001F042F;
 			productRefGroup = 50B7601921126786001F042F /* Products */;
@@ -317,11 +394,21 @@
 				50B7602021126786001F042F /* XPUIKit_iOSTests */,
 				50B76034211267B0001F042F /* XPUIKit_macOS */,
 				50B7603C211267B0001F042F /* XPUIKit_macOSTests */,
+				50147C662112AB6D00788F19 /* XPUIKit_sample_macOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		50147C652112AB6D00788F19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50147C6C2112AB6F00788F19 /* Assets.xcassets in Resources */,
+				50147C6F2112AB6F00788F19 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		50B7601621126786001F042F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -340,6 +427,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50147C7F2112AD5900788F19 /* XPUIWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,10 +441,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		50147C632112AB6D00788F19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50147C6A2112AB6D00788F19 /* AppDelegate.swift in Sources */,
+				50147C872112B33F00788F19 /* MainWindowPresentationDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		50B7601421126786001F042F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50147C852112B1A200788F19 /* XPUIPresentation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,9 +469,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50B76069211272CE001F042F /* XPUIView_macOS.m in Sources */,
-				50B7606D211275BE001F042F /* NSColor+XPUI_macOS.m in Sources */,
-				50B7607121127775001F042F /* NSLayoutGuide+XPUI_macOS.m in Sources */,
+				50147C7E2112AD5900788F19 /* XPUIWindowController.m in Sources */,
+				50147C842112B19100788F19 /* XPUIPresentation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,13 +478,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50B7605F21126E57001F042F /* XPUIView_BasicTests_macOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		50147C762112ABDF00788F19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50B76034211267B0001F042F /* XPUIKit_macOS */;
+			targetProxy = 50147C752112ABDF00788F19 /* PBXContainerItemProxy */;
+		};
 		50B7602421126786001F042F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 50B7601721126786001F042F /* XPUIKit_iOS */;
@@ -400,7 +501,159 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		50147C6D2112AB6F00788F19 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50147C6E2112AB6F00788F19 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		50147C732112AB6F00788F19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = XPUIKit_sample_macOS/XPUIKit_sample_macOS.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = V6ESYGU6CV;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = XPUIKit_sample_macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.saturdayapps.XPUIKit-sample-macOS";
+				PRODUCT_NAME = "XPUIKit Sample";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		50147C742112AB6F00788F19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = XPUIKit_sample_macOS/XPUIKit_sample_macOS.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = V6ESYGU6CV;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = XPUIKit_sample_macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.saturdayapps.XPUIKit-sample-macOS";
+				PRODUCT_NAME = "XPUIKit Sample";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
 		50B7601121126774001F042F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -475,7 +728,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = XPUIKit_iOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -548,7 +801,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = XPUIKit_iOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -770,7 +1023,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -844,7 +1097,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.saturdayapps.XPUIKit-macOS";
@@ -994,6 +1247,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		50147C722112AB6F00788F19 /* Build configuration list for PBXNativeTarget "XPUIKit_sample_macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50147C732112AB6F00788F19 /* Debug */,
+				50147C742112AB6F00788F19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		50B7601021126774001F042F /* Build configuration list for PBXProject "XPUIKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
