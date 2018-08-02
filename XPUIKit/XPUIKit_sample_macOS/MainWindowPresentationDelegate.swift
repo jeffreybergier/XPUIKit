@@ -7,9 +7,21 @@
 
 import XPUIKit
 
-class MainWindowPresentationDelegate: XPUIPresentationDelegate {
-    func provideViewControllerContext(forPresentationContext presentation: Any) -> XPUIViewControllerContext {
+class MainWindowPresentationDelegate { }
+
+extension MainWindowPresentationDelegate: XPUIPresentationDelegate {
+    func provideViewController(forPresentation presentation: Any) -> XPUIViewController {
+        let vc = XPUIViewControllerCreator.createViewController(with: self)
+        return vc
+    }
+}
+
+extension MainWindowPresentationDelegate: XPUIViewControllerDelegate {
+    func viewDidLoad(forViewController controller: Any) {
         //
+    }
+
+    func provideView(forViewController controller: Any) -> Any! {
         fatalError()
     }
 }

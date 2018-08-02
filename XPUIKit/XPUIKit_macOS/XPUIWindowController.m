@@ -15,7 +15,7 @@
 
 - (void)windowWillLoad;
 {
-    id<XPUIViewControllerContext> vc = [[self xp_delegate] provideViewControllerContextForPresentationContext:self];
+    id<XPUIViewController> vc = [[self xp_delegate] provideViewControllerForPresentation:self];
     [self setContentViewController:vc];
 }
 

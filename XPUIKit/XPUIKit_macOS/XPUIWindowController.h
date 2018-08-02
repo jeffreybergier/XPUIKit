@@ -32,6 +32,6 @@
 #import "XPUIPresentation.h"
 
 @interface XPUIWindowController: NSWindowController <XPUIPresentation>
-@property (readonly, nonatomic, strong) id<XPUIViewControllerContext> _Nonnull xp_rootViewController;
+@property (readonly, nonatomic, strong) id<XPUIViewController> _Nonnull xp_rootViewController;
 @property (nonatomic, strong) id<XPUIPresentationDelegate> _Nonnull xp_delegate;
 @end

@@ -65,13 +65,8 @@
 @property (readonly, nonatomic, strong) id<XPUILayoutGuide> _Nonnull xp_safeAreaLayoutGuide;
 @end
 
-@protocol XPUIViewControllerContext // NS/UI/ViewController
-@property (nonatomic, strong) id<XPUIViewContext> _Nonnull xp_rootView;
-@property (readonly, nonatomic, strong) id<XPUILayoutGuide> _Nonnull xp_safeAreaLayoutGuide;
-@end
-
 @protocol XPUIListContext // NS/UI/TableView
 @end
 
-@protocol XPUIMasterDetailContext <XPUIViewControllerContext> // NS/UI/TableView
+@protocol XPUIMasterDetailContext // NS/UI/TableView
 @end

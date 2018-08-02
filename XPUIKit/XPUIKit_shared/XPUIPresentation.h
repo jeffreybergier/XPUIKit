@@ -29,14 +29,14 @@
 //
 
 @import Foundation;
-#import "XPUIProtocols.h"
+#import "XPUIViewController.h"
 
 @protocol XPUIPresentationDelegate
-- (id<XPUIViewControllerContext> _Nonnull)provideViewControllerContextForPresentationContext:(id _Nonnull)presentation;
+- (id<XPUIViewController> _Nonnull)provideViewControllerForPresentation:(id _Nonnull)presentation;
 @end
 
 @protocol XPUIPresentation // NSWindow and UIViewController (when used for presentation)
-@property (readonly, nonatomic, strong) id<XPUIViewControllerContext> _Nonnull xp_rootViewController;
+@property (readonly, nonatomic, strong) id<XPUIViewController> _Nonnull xp_rootViewController;
 @property (nonatomic, strong) id<XPUIPresentationDelegate> _Nonnull xp_delegate;
 @end
 
