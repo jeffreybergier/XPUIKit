@@ -40,10 +40,23 @@ extension MainWindowPresentationDelegate: XPUIPresentationDelegate {
 }
 
 extension MainWindowPresentationDelegate: XPUIViewControllerDelegate {
-    func viewDidLoad(forViewController controller: Any) {
-        //
+    func provideView(for controller: XPUIViewController) -> XPUIView {
+        return XPUIViewCreator.createView(with: self)
     }
-    func provideView(forViewController controller: Any) -> Any! {
-        fatalError()
+    func viewDidLoad(in controller: XPUIViewController) {
+        print("ViewController: ViewDidLoad")
+    }
+    func viewDidLayoutSubviews(in controller: XPUIViewController) {
+        print("ViewController: Layout")
+    }
+}
+
+extension MainWindowPresentationDelegate: XPUIViewDelegate {
+    func viewDidMove(toPresentation view: XPUIView) {
+        print("View: viewDidMoveToPresentation")
+    }
+
+    func viewDidLayout(_ view: XPUIView) {
+        print("View: Layout")
     }
 }

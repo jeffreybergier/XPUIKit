@@ -28,13 +28,13 @@
 //
 //
 
-#import "XPUIWindowController.h"
+#import "XPUIPresentation_macOS.h"
 
-@interface XPUIWindowController ()
+@interface XPUIPresentation_macOS ()
 
 @end
 
-@implementation XPUIWindowController
+@implementation XPUIPresentation_macOS
 
 - (void)windowWillLoad;
 {
@@ -42,4 +42,14 @@
     [self setContentViewController:vc];
 }
 
+@end
+
+@implementation XPUIPresentationCreator: NSObject
++ (id<XPUIPresentation> _Nonnull)createPresentationWithDelegate:(id<XPUIPresentationDelegate> _Nonnull)delegate;
+{
+    NSWindowController<XPUIPresentation>* wc = [[XPUIPresentation_macOS alloc] initWithWindowNibName:@"XPUIPresentation_macOS"];
+    [wc setXp_delegate:delegate];
+    [wc showWindow:nil];
+    return wc;
+}
 @end

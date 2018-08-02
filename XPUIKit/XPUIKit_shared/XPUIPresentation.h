@@ -38,11 +38,7 @@
 - (id<XPUIViewController> _Nonnull)provideViewControllerForPresentation:(id<XPUIPresentation> _Nonnull)presentation;
 @end
 
-@protocol XPUIPresentation // NSWindow and UIViewController (when used for presentation)
+@protocol XPUIPresentation // NSWindowController and UIViewController (when used for presentation)
 @property (readonly, nonatomic, strong) id<XPUIViewController> _Nonnull xp_rootViewController;
-@property (nonatomic, strong) id<XPUIPresentationDelegate> _Nonnull xp_delegate;
-@end
-
-@interface XPUIPresentationCreator: NSObject
-+ (id<XPUIPresentation> _Nonnull)createPresentationWithDelegate:(id<XPUIPresentationDelegate> _Nonnull)delegate;
+@property (nonatomic, strong) id<XPUIPresentationDelegate> _Nullable xp_delegate;
 @end

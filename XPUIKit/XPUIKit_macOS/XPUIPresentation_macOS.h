@@ -1,6 +1,6 @@
 //
-//  XPUIProtocols.h
-//  XPUIKit
+//  XPUIWindowController.h
+//  XPUIKit_macOS
 //
 //  Created by Jeffrey Bergier on 01/08/2018.
 //
@@ -28,45 +28,14 @@
 //
 //
 
-#if TARGET_OS_IPHONE
-@import UIKit;
-#else
 @import AppKit;
-#endif
+#import "XPUIPresentation.h"
 
-@protocol XPUIImage
+@interface XPUIPresentation_macOS: NSWindowController <XPUIPresentation>
+@property (readonly, nonatomic, strong) id<XPUIViewController> _Nonnull xp_rootViewController;
+@property (nonatomic, strong) id<XPUIPresentationDelegate> _Nullable xp_delegate;
 @end
 
-@protocol XPUIColor
-@property (readonly, nonatomic) CGColorRef xp_cgColor;
-@end
-
-@protocol XPUILayoutGuide
-@property (readonly, strong) NSLayoutXAxisAnchor* leadingAnchor;
-@property (readonly, strong) NSLayoutXAxisAnchor* trailingAnchor;
-@property (readonly, strong) NSLayoutYAxisAnchor* topAnchor;
-@property (readonly, strong) NSLayoutYAxisAnchor* bottomAnchor;
-@property (readonly, strong) NSLayoutDimension* widthAnchor;
-@property (readonly, strong) NSLayoutDimension* heightAnchor;
-@property (readonly, strong) NSLayoutXAxisAnchor* centerXAnchor;
-@property (readonly, strong) NSLayoutYAxisAnchor* centerYAnchor;
-@end
-
-@protocol XPUIToolbarItemContext
-@end
-
-@protocol XPUIToolbarContext
-@property NSArray<id<XPUIToolbarContext>>* _Nonnull backgroundColor;
-@end
-
-@protocol XPUIViewContext // NS/UI/View
-@property (nonatomic) CGFloat xp_alpha;
-@property (nonatomic, strong) id<XPUIColor> _Nonnull xp_backgroundColor;
-@property (readonly, nonatomic, strong) id<XPUILayoutGuide> _Nonnull xp_safeAreaLayoutGuide;
-@end
-
-@protocol XPUIListContext // NS/UI/TableView
-@end
-
-@protocol XPUIMasterDetailContext // NS/UI/TableView
+@interface XPUIPresentationCreator: NSObject
++ (id<XPUIPresentation> _Nonnull)createPresentationWithDelegate:(id<XPUIPresentationDelegate> _Nonnull)delegate;
 @end

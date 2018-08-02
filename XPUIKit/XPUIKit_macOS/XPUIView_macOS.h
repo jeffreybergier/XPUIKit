@@ -1,8 +1,8 @@
 //
-//  XPUIViewController.m
-//  XPUIKit
+//  XPUIView_macOS.h
+//  XPUIKit_macOS
 //
-//  Created by Jeffrey Bergier on 01/08/2018.
+//  Created by Jeffrey Bergier on 02/08/2018.
 //
 //  MIT License
 //
@@ -28,14 +28,14 @@
 //
 //
 
-#import "XPUIViewController.h"
-#import "XPUIViewController_macOS.h"
+@import AppKit;
+#import "XPUIView.h"
 
-@implementation XPUIViewControllerCreator
-+ (id<XPUIViewController> _Nonnull)createViewControllerWithDelegate:(id<XPUIViewControllerDelegate> _Nonnull)delegate;
-{
-    NSViewController<XPUIViewController>* vc = [[XPUIViewController_macOS alloc] init];
-    [vc setXp_delegate:delegate];
-    return vc;
-}
+@interface XPUIView_macOS: NSView <XPUIView>
+@property (nonatomic, strong) id<XPUIViewDelegate> _Nullable xp_delegate;
+@property (readonly, nonatomic, strong) NSLayoutGuide* _Nonnull xp_layoutGuide;
+@end
+
+@interface XPUIViewCreator: NSObject
++ (id<XPUIView> _Nonnull)createViewWithDelegate:(id<XPUIViewDelegate> _Nonnull)delegate;
 @end

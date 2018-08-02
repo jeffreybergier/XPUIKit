@@ -31,15 +31,31 @@
 #import "XPUIViewController_macOS.h"
 
 @interface XPUIViewController_macOS ()
-
 @end
 
 @implementation XPUIViewController_macOS
-
 - (void)loadView;
 {
-    id view = [[self xp_delegate] provideViewForViewController:self];
+    id view = [[self xp_delegate] provideViewForController:self];
     [self setView:view];
 }
+- (void)viewDidLoad;
+{
+    [super viewDidLoad];
+    [[self xp_delegate] viewDidLoadInController:self];
+}
+- (void)viewDidLayout;
+{
+    [super viewDidLayout];
+    [[self xp_delegate] viewDidLayoutSubviewsInController:self];
+}
+@end
 
+@implementation XPUIViewControllerCreator
++ (id<XPUIViewController> _Nonnull)createViewControllerWithDelegate:(id<XPUIViewControllerDelegate> _Nonnull)delegate;
+{
+    NSViewController<XPUIViewController>* vc = [[XPUIViewController_macOS alloc] init];
+    [vc setXp_delegate:delegate];
+    return vc;
+}
 @end

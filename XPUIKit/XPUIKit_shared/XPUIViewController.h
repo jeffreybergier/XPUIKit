@@ -29,20 +29,18 @@
 //
 
 @import Foundation;
+#import "XPUIView.h"
 
 @protocol XPUIViewController;
 @protocol XPUIViewControllerDelegate;
 
 @protocol XPUIViewControllerDelegate
-- (id)provideViewForViewController:(id _Nonnull)controller;
-- (void)viewDidLoadForViewController:(id _Nonnull)controller;
+- (id<XPUIView> _Nonnull)provideViewForController:(id<XPUIViewController> _Nonnull)controller;
+- (void)viewDidLoadInController:(id<XPUIViewController> _Nonnull)controller;
+- (void)viewDidLayoutSubviewsInController:(id<XPUIViewController> _Nonnull)controller;
 @end
 
 @protocol XPUIViewController
-@property (nonatomic, strong) id<XPUIViewControllerDelegate> _Nonnull xp_delegate;
-@end
-
-@interface XPUIViewControllerCreator: NSObject
-+ (id<XPUIViewController> _Nonnull)createViewControllerWithDelegate:(id<XPUIViewControllerDelegate> _Nonnull)delegate;
+@property (nonatomic, strong) id<XPUIViewControllerDelegate> _Nullable xp_delegate;
 @end
 

@@ -32,5 +32,9 @@
 #import "XPUIViewController.h"
 
 @interface XPUIViewController_macOS: NSViewController <XPUIViewController>
-@property (nonatomic, strong) id<XPUIViewControllerDelegate> _Nonnull xp_delegate;
+@property (nonatomic, strong) id<XPUIViewControllerDelegate> _Nullable xp_delegate;
+@end
+
+@interface XPUIViewControllerCreator: NSObject
++ (id<XPUIViewController> _Nonnull)createViewControllerWithDelegate:(id<XPUIViewControllerDelegate> _Nonnull)delegate;
 @end

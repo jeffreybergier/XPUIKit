@@ -28,8 +28,22 @@
 //
 //
 
-@import Foundation;
 
-@interface XPUIViewCreator: NSObject
+#if TARGET_OS_IPHONE
+@import UIKit;
+#else
+@import AppKit;
+#endif
 
+@protocol XPUIView;
+@protocol XPUIViewDelegate;
+
+@protocol XPUIViewDelegate
+- (void)viewDidMoveToPresentation:(id<XPUIView> _Nonnull)view;
+- (void)viewDidLayout:(id<XPUIView> _Nonnull)view;
+@end
+
+@protocol XPUIView
+@property (nonatomic, strong) id<XPUIViewDelegate> _Nullable xp_delegate;
+@property (readonly, nonatomic, strong) NSLayoutGuide* _Nonnull xp_layoutGuide;
 @end

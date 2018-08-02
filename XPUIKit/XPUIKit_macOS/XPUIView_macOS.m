@@ -1,8 +1,8 @@
 //
-//  XPUIWindowController.h
+//  XPUIView_macOS.m
 //  XPUIKit_macOS
 //
-//  Created by Jeffrey Bergier on 01/08/2018.
+//  Created by Jeffrey Bergier on 02/08/2018.
 //
 //  MIT License
 //
@@ -28,10 +28,35 @@
 //
 //
 
-@import AppKit;
-#import "XPUIPresentation.h"
+#import "XPUIView_macOS.h"
 
-@interface XPUIWindowController: NSWindowController <XPUIPresentation>
-@property (readonly, nonatomic, strong) id<XPUIViewController> _Nonnull xp_rootViewController;
-@property (nonatomic, strong) id<XPUIPresentationDelegate> _Nonnull xp_delegate;
+@implementation XPUIView_macOS
+@dynamic xp_layoutGuide;
+
+- (NSLayoutGuide* _Nonnull)xp_layoutGuide;
+{
+    return [[self layoutGuides] firstObject];
+}
+
+- (void)viewDidMoveToWindow;
+{
+    [super viewDidMoveToWindow];
+    [[self xp_delegate] viewDidMoveToPresentation:self];
+}
+
+- (void)layout;
+{
+    [super layout];
+    [[self xp_delegate] viewDidLayout:self];
+}
+
+@end
+
+@implementation XPUIViewCreator
++ (id<XPUIView> _Nonnull)createViewWithDelegate:(id<XPUIViewDelegate> _Nonnull)delegate;
+{
+    id view = [[XPUIView_macOS alloc] init];
+    [view setXp_delegate:delegate];
+    return view;
+}
 @end
