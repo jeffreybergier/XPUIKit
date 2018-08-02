@@ -31,8 +31,11 @@
 @import Foundation;
 #import "XPUIViewController.h"
 
+@protocol XPUIPresentationDelegate;
+@protocol XPUIPresentation;
+
 @protocol XPUIPresentationDelegate
-- (id<XPUIViewController> _Nonnull)provideViewControllerForPresentation:(id _Nonnull)presentation;
+- (id<XPUIViewController> _Nonnull)provideViewControllerForPresentation:(id<XPUIPresentation> _Nonnull)presentation;
 @end
 
 @protocol XPUIPresentation // NSWindow and UIViewController (when used for presentation)

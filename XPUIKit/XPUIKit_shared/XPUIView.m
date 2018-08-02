@@ -1,8 +1,8 @@
 //
-//  XPUIWindowController.m
-//  XPUIKit_macOS
+//  XPUIView.m
+//  XPUIKit
 //
-//  Created by Jeffrey Bergier on 01/08/2018.
+//  Created by Jeffrey Bergier on 02/08/2018.
 //
 //  MIT License
 //
@@ -28,18 +28,8 @@
 //
 //
 
-#import "XPUIWindowController.h"
+#import "XPUIView.h"
 
-@interface XPUIWindowController ()
-
-@end
-
-@implementation XPUIWindowController
-
-- (void)windowWillLoad;
-{
-    id<XPUIViewController> vc = [[self xp_delegate] provideViewControllerForPresentation:self];
-    [self setContentViewController:vc];
-}
+@implementation XPUIViewCreator
 
 @end

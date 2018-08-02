@@ -26,6 +26,10 @@
 		50147C8D2112B6FE00788F19 /* XPUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50147C892112B6FE00788F19 /* XPUIViewController.m */; };
 		50147C902112B8AA00788F19 /* XPUIViewController_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 50147C8E2112B8AA00788F19 /* XPUIViewController_macOS.h */; };
 		50147C912112B8AA00788F19 /* XPUIViewController_macOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 50147C8F2112B8AA00788F19 /* XPUIViewController_macOS.m */; };
+		50147C94211372BE00788F19 /* XPUIView.h in Headers */ = {isa = PBXBuildFile; fileRef = 50147C92211372BE00788F19 /* XPUIView.h */; };
+		50147C95211372BE00788F19 /* XPUIView.h in Headers */ = {isa = PBXBuildFile; fileRef = 50147C92211372BE00788F19 /* XPUIView.h */; };
+		50147C96211372BE00788F19 /* XPUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50147C93211372BE00788F19 /* XPUIView.m */; };
+		50147C97211372BE00788F19 /* XPUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50147C93211372BE00788F19 /* XPUIView.m */; };
 		50B7602221126786001F042F /* XPUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B7601821126786001F042F /* XPUIKit.framework */; };
 		50B7602921126786001F042F /* XPUIKit_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B7601B21126786001F042F /* XPUIKit_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50B7603E211267B0001F042F /* XPUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B76035211267B0001F042F /* XPUIKit.framework */; };
@@ -91,6 +95,8 @@
 		50147C892112B6FE00788F19 /* XPUIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPUIViewController.m; sourceTree = "<group>"; };
 		50147C8E2112B8AA00788F19 /* XPUIViewController_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPUIViewController_macOS.h; sourceTree = "<group>"; };
 		50147C8F2112B8AA00788F19 /* XPUIViewController_macOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPUIViewController_macOS.m; sourceTree = "<group>"; };
+		50147C92211372BE00788F19 /* XPUIView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPUIView.h; sourceTree = "<group>"; };
+		50147C93211372BE00788F19 /* XPUIView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPUIView.m; sourceTree = "<group>"; };
 		50B7601821126786001F042F /* XPUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XPUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50B7601B21126786001F042F /* XPUIKit_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPUIKit_iOS.h; sourceTree = "<group>"; };
 		50B7601C21126786001F042F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -230,6 +236,8 @@
 			children = (
 				50B760532112682C001F042F /* XPUIKit.h */,
 				50B7605A21126A6F001F042F /* XPUIProtocols.h */,
+				50147C92211372BE00788F19 /* XPUIView.h */,
+				50147C93211372BE00788F19 /* XPUIView.m */,
 				50147C882112B6FE00788F19 /* XPUIViewController.h */,
 				50147C892112B6FE00788F19 /* XPUIViewController.m */,
 				50147C802112AEA200788F19 /* XPUIPresentation.h */,
@@ -255,6 +263,7 @@
 				50B7602921126786001F042F /* XPUIKit_iOS.h in Headers */,
 				50B76058211268BD001F042F /* XPUIKit.h in Headers */,
 				50147C812112AEA200788F19 /* XPUIPresentation.h in Headers */,
+				50147C94211372BE00788F19 /* XPUIView.h in Headers */,
 				50147C8A2112B6FE00788F19 /* XPUIViewController.h in Headers */,
 				50B7605B21126A6F001F042F /* XPUIProtocols.h in Headers */,
 			);
@@ -265,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50147C7D2112AD5900788F19 /* XPUIWindowController.h in Headers */,
+				50147C95211372BE00788F19 /* XPUIView.h in Headers */,
 				50B76045211267B0001F042F /* XPUIKit_macOS.h in Headers */,
 				50147C902112B8AA00788F19 /* XPUIViewController_macOS.h in Headers */,
 				50B76059211268BD001F042F /* XPUIKit.h in Headers */,
@@ -472,6 +482,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50147C8C2112B6FE00788F19 /* XPUIViewController.m in Sources */,
+				50147C96211372BE00788F19 /* XPUIView.m in Sources */,
 				50147C852112B1A200788F19 /* XPUIPresentation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,6 +499,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50147C912112B8AA00788F19 /* XPUIViewController_macOS.m in Sources */,
+				50147C97211372BE00788F19 /* XPUIView.m in Sources */,
 				50147C8D2112B6FE00788F19 /* XPUIViewController.m in Sources */,
 				50147C7E2112AD5900788F19 /* XPUIWindowController.m in Sources */,
 				50147C842112B19100788F19 /* XPUIPresentation.m in Sources */,
