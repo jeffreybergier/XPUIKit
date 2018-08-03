@@ -30,40 +30,51 @@
 
 #import "XPUIView_macOS.h"
 #import "UILayoutGuide.h"
+@import ObjectiveC;
 
-@interface XPUIView_macOS ()
-@end
+@implementation NSView (XPUI)
 
-@implementation XPUIView_macOS
+static char kLayoutGuideAssociationKey;
+static char kXPUIViewDelegateKey;
 
-@dynamic xp_layer;
-
-- (instancetype)init
++ (void)load;
 {
-    self = [super init];
-    [self commonInit];
-    return self;
-}
-
-- (instancetype)initWithCoder:(NSCoder *)coder
-{
-    self = [super initWithCoder:coder];
-    [self commonInit];
-    return self;
-}
-
-- (instancetype)initWithFrame:(NSRect)frameRect;
-{
-    self = [super initWithFrame:frameRect];
-    [self commonInit];
-    return self;
-}
-
-- (void)commonInit;
-{
-    [self setWantsLayer:YES];
-    [self setTranslatesAutoresizingMaskIntoConstraints:NO];
-    self->_xp_layoutGuide = [[UILayoutGuide alloc] initWithOwningView:self];
+    void(^commonInit)(id<AspectInfo>) = ^void(id<AspectInfo> aspectInfo){
+        NSView<XPUIView>* view = [aspectInfo instance];
+            [view setWantsLayer:YES];
+            [view setTranslatesAutoresizingMaskIntoConstraints:NO];
+            UILayoutGuide* lg = [[UILayoutGuide alloc] initWithOwningView:view];
+            objc_setAssociatedObject(view, &kLayoutGuideAssociationKey, lg, OBJC_ASSOCIATION_RETAIN);
+    };
+    [NSView aspect_hookSelector:@selector(init)
+                    withOptions:AspectPositionAfter
+                     usingBlock:commonInit error:nil];
+    // NOTE: hooking into initWithFrame caused infinite init loop
+    [NSView aspect_hookSelector:@selector(initWithCoder:)
+                    withOptions:AspectPositionAfter
+                     usingBlock:commonInit error:nil];
+    [NSView aspect_hookSelector:@selector(viewDidMoveToWindow)
+                    withOptions:AspectPositionAfter
+                     usingBlock:^(id<AspectInfo> info)
+     {
+         NSView<XPUIView>* v = [info instance];
+         [[v xp_delegate] viewDidMoveToPresentation:v];
+     } error:nil];
+    [NSView aspect_hookSelector:@selector(layout)
+                    withOptions:AspectPositionAfter
+                     usingBlock:^(id<AspectInfo> info)
+     {
+         NSView<XPUIView>* v = [info instance];
+         [[v xp_delegate] viewDidLayout:v];
+     } error:nil];
+//    [NSView aspect_hookSelector:@selector(requiresConstraintBasedLayout)
+//                    withOptions:AspectPositionInstead
+//                     usingBlock:^(id<AspectInfo> info)
+//     {
+//         NSInvocation* invocation = [info originalInvocation];
+//         BOOL answer = YES;
+//         [invocation setReturnValue:&answer];
+//     } error:nil];
 }
 
 - (CALayer *)xp_layer;
@@ -76,21 +87,19 @@
     [self addSubview:view];
 }
 
-+ (BOOL)requiresConstraintBasedLayout;
+- (UILayoutGuide* _Nonnull)xp_layoutGuide;
 {
-    return YES;
+    return objc_getAssociatedObject(self, &kLayoutGuideAssociationKey);
 }
 
-- (void)viewDidMoveToWindow;
+- (id<XPUIViewDelegate>)xp_delegate;
 {
-    [super viewDidMoveToWindow];
-    [[self xp_delegate] viewDidMoveToPresentation:self];
+    return objc_getAssociatedObject(self, &kXPUIViewDelegateKey);
 }
 
-- (void)layout;
+- (void)setXp_delegate:(id<XPUIViewDelegate>)delegate;
 {
-    [super layout];
-    [[self xp_delegate] viewDidLayout:self];
+    objc_setAssociatedObject(self, &kXPUIViewDelegateKey, delegate, OBJC_ASSOCIATION_RETAIN);
 }
 
 @end
@@ -98,7 +107,7 @@
 @implementation XPUIViewCreator
 + (id<XPUIView> _Nonnull)createViewWithDelegate:(id<XPUIViewDelegate> _Nullable)delegate;
 {
-    id view = [[XPUIView_macOS alloc] init];
+    id view = [[NSView alloc] init];
     [view setXp_delegate:delegate];
     return view;
 }
