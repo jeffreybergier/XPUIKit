@@ -28,7 +28,7 @@
 //
 //
 
-#import "XPUIView_macOS.h"
+#import "NSView.h"
 #import "UILayoutGuide.h"
 @import ObjectiveC;
 

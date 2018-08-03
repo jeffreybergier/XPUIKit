@@ -74,7 +74,7 @@
     if (g) {
         return [g widthAnchor];
     } else {
-        return [[self owningView] heightAnchor];
+        return [[self owningView] widthAnchor];
     }
 }
 

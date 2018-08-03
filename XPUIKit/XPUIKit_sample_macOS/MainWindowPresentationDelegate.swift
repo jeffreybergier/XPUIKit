@@ -32,6 +32,7 @@ import XPUIKit
 
 class MainWindowPresentationDelegate {
     let blueSubview = XPUIViewCreator.createView(with: nil)
+    let label = XPUILabelCreator.createLabel(with: nil)
 }
 
 extension MainWindowPresentationDelegate: XPUIPresentationDelegate {
@@ -58,15 +59,19 @@ extension MainWindowPresentationDelegate: XPUIViewDelegate {
         print("View: viewDidMoveToPresentation")
         view.xp_layer.backgroundColor = CGColor(red: 1, green: 0, blue: 0, alpha: 1)
         view.xp_addSubview(self.blueSubview)
-
+        self.blueSubview.xp_addSubview(self.label)
         self.blueSubview.xp_layer.backgroundColor = CGColor(red: 0, green: 0, blue: 1, alpha: 1)
         NSLayoutConstraint.activate([
+            self.label.xp_layoutGuide.centerXAnchor.constraint(equalTo: self.blueSubview.xp_layoutGuide.centerXAnchor),
+            self.label.xp_layoutGuide.centerYAnchor.constraint(equalTo: self.blueSubview.xp_layoutGuide.centerYAnchor),
+//            self.label.xp_layoutGuide.widthAnchor.constraint(equalToConstant: 100),
+//            self.label.xp_layoutGuide.heightAnchor.constraint(equalToConstant: 50),
             self.blueSubview.xp_layoutGuide.leadingAnchor.constraint(equalTo: view.xp_layoutGuide.leadingAnchor, constant: 100),
             view.xp_layoutGuide.trailingAnchor.constraint(equalTo: self.blueSubview.xp_layoutGuide.trailingAnchor, constant: 100),
             self.blueSubview.xp_layoutGuide.topAnchor.constraint(equalTo: view.xp_layoutGuide.topAnchor, constant: 100),
             view.xp_layoutGuide.bottomAnchor.constraint(equalTo: self.blueSubview.xp_layoutGuide.bottomAnchor, constant: 100),
             ])
-
+        self.label.xp_attributedString = NSAttributedString(string: "HI There! 🙊")
     }
 
     func viewDidLayout(_ view: XPUIView) {
