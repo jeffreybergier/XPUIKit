@@ -62,16 +62,17 @@ extension MainWindowPresentationDelegate: XPUIViewDelegate {
         self.blueSubview.xp_addSubview(self.label)
         self.blueSubview.xp_layer.backgroundColor = CGColor(red: 0, green: 0, blue: 1, alpha: 1)
         NSLayoutConstraint.activate([
-            self.label.xp_layoutGuide.centerXAnchor.constraint(equalTo: self.blueSubview.xp_layoutGuide.centerXAnchor),
-            self.label.xp_layoutGuide.centerYAnchor.constraint(equalTo: self.blueSubview.xp_layoutGuide.centerYAnchor),
-//            self.label.xp_layoutGuide.widthAnchor.constraint(equalToConstant: 100),
-//            self.label.xp_layoutGuide.heightAnchor.constraint(equalToConstant: 50),
+            self.label.xp_layoutGuide.leadingAnchor.constraint(equalTo: self.blueSubview.xp_layoutGuide.leadingAnchor, constant: 50),
+            self.blueSubview.xp_layoutGuide.trailingAnchor.constraint(equalTo: self.label.xp_layoutGuide.trailingAnchor, constant: 50),
+            self.label.xp_layoutGuide.topAnchor.constraint(equalTo: self.blueSubview.xp_layoutGuide.topAnchor, constant: 50),
+            self.blueSubview.xp_layoutGuide.bottomAnchor.constraint(greaterThanOrEqualTo: self.label.xp_layoutGuide.bottomAnchor, constant: 50),
             self.blueSubview.xp_layoutGuide.leadingAnchor.constraint(equalTo: view.xp_layoutGuide.leadingAnchor, constant: 100),
             view.xp_layoutGuide.trailingAnchor.constraint(equalTo: self.blueSubview.xp_layoutGuide.trailingAnchor, constant: 100),
             self.blueSubview.xp_layoutGuide.topAnchor.constraint(equalTo: view.xp_layoutGuide.topAnchor, constant: 100),
             view.xp_layoutGuide.bottomAnchor.constraint(equalTo: self.blueSubview.xp_layoutGuide.bottomAnchor, constant: 100),
             ])
-        self.label.xp_attributedString = NSAttributedString(string: "HI There! 🙊")
+        self.label.xp_singleLineMode = false
+        self.label.xp_attributedString = NSAttributedString(string: "2018-08-02 22:32:42.388420-0700 XPUIKit Sample[68862:1901826] [User Defaults] Couldn't read values in CFPrefsPlistSource<0x6000000e6f00> (Domain: com.apple.PowerManagement, User: kCFPreferencesAnyUser, ByHost: Yes, Container: (null), Contents Need Refresh: Yes): accessing preferences outside an application's container requires user-preference-read or file-read-data sandbox access, detaching from cfprefsd")
     }
 
     func viewDidLayout(_ view: XPUIView) {

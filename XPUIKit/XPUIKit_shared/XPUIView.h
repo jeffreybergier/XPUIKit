@@ -49,8 +49,13 @@
 @property (readonly, nonatomic, strong) UILayoutGuide* _Nonnull xp_layoutGuide;
 @property (readonly, nonatomic, strong) CALayer* _Nonnull xp_layer;
 - (void)xp_addSubview:(id<XPUIView> _Nonnull)view;
+- (NSLayoutPriority)contentCompressionResistancePriorityForOrientation:(NSLayoutConstraintOrientation)orientation;
+- (void)setContentCompressionResistancePriority:(NSLayoutPriority)priority forOrientation:(NSLayoutConstraintOrientation)orientation;
+- (NSLayoutPriority)contentHuggingPriorityForOrientation:(NSLayoutConstraintOrientation)orientation;
+- (void)setContentHuggingPriority:(NSLayoutPriority)priority forOrientation:(NSLayoutConstraintOrientation)orientation;
 @end
 
 @protocol XPUILabel <XPUIView>
+@property (nonatomic) BOOL xp_singleLineMode;
 @property (nonatomic, strong) NSAttributedString* _Nullable xp_attributedString;
 @end

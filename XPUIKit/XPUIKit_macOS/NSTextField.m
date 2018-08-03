@@ -9,7 +9,17 @@
 
 @implementation NSTextField (XPUI)
 
-@dynamic xp_delegate, xp_layoutGuide, xp_layer;
+@dynamic xp_singleLineMode;
+
+- (BOOL)xp_singleLineMode;
+{
+    return [self usesSingleLineMode];
+}
+
+- (void)setXp_singleLineMode:(BOOL)newValue;
+{
+    [self setUsesSingleLineMode:newValue];
+}
 
 - (NSAttributedString* _Nullable)xp_attributedString;
 {
@@ -21,11 +31,6 @@
     [self setAttributedStringValue:value];
 }
 
-- (NSSize)intrinsicContentSize;
-{
-    return NSMakeSize(200, 100);
-}
-
 @end
 
 @implementation XPUILabelCreator
@@ -33,6 +38,10 @@
 {
     NSTextField<XPUILabel>* view = [[NSTextField alloc] init];
     [view setXp_delegate:delegate];
+    [view setContentCompressionResistancePriority:NSLayoutPriorityDefaultLow forOrientation:NSLayoutConstraintOrientationHorizontal];
+    [view setContentCompressionResistancePriority:NSLayoutPriorityDefaultLow forOrientation:NSLayoutConstraintOrientationVertical];
+    [view setContentHuggingPriority:NSLayoutPriorityDefaultLow forOrientation:NSLayoutConstraintOrientationHorizontal];
+    [view setContentHuggingPriority:NSLayoutPriorityDefaultLow forOrientation:NSLayoutConstraintOrientationVertical];
     [view setEditable:NO];
     [view setBezeled:NO];
     [view setDrawsBackground:NO];
