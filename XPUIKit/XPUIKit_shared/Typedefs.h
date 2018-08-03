@@ -1,8 +1,8 @@
 //
-//  NSTextField.h
-//  XPUIKit_macOS
+//  Typedefs.h
+//  XPUIKit
 //
-//  Created by Jeffrey Bergier on 02/08/2018.
+//  Created by Jeffrey Bergier on 03/08/2018.
 //
 //  MIT License
 //
@@ -28,15 +28,14 @@
 //
 //
 
+
+#if TARGET_OS_IPHONE
+
+@import UIKit;
+
+#else
+
 @import AppKit;
-#import "XPUIView.h"
+typedef NSStackView* XPUIStackViewInstance;
 
-@interface NSTextField (XPUI) <XPUILabel>
-@property (nonatomic) BOOL xp_singleLineMode;
-@property (nonatomic, strong) NSAttributedString* _Nullable xp_attributedString;
-@end
-
-@interface XPUILabelCreator: NSObject
-+ (NSView<XPUILabel>* _Nonnull)createLabelWithDelegate:(id<XPUIViewDelegate> _Nullable)delegate;
-@end
-
+#endif

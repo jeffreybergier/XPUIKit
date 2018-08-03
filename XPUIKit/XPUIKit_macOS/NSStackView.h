@@ -1,8 +1,8 @@
 //
-//  NSTextField.h
+//  NSStackView.h
 //  XPUIKit_macOS
 //
-//  Created by Jeffrey Bergier on 02/08/2018.
+//  Created by Jeffrey Bergier on 03/08/2018.
 //
 //  MIT License
 //
@@ -31,12 +31,6 @@
 @import AppKit;
 #import "XPUIView.h"
 
-@interface NSTextField (XPUI) <XPUILabel>
-@property (nonatomic) BOOL xp_singleLineMode;
-@property (nonatomic, strong) NSAttributedString* _Nullable xp_attributedString;
+@interface NSStackView (XPUI) <XPUIStackView>
+- (void)xp_addArrangedSubview:(id<XPUIView>)subview;
 @end
-
-@interface XPUILabelCreator: NSObject
-+ (NSView<XPUILabel>* _Nonnull)createLabelWithDelegate:(id<XPUIViewDelegate> _Nullable)delegate;
-@end
-

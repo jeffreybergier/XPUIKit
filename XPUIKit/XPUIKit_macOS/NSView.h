@@ -37,8 +37,9 @@
 @property (readonly, nonatomic, strong) UILayoutGuide* _Nonnull xp_layoutGuide;
 @property (readonly, nonatomic, strong) CALayer* _Nonnull xp_layer;
 - (void)xp_addSubview:(id<XPUIView> _Nonnull)view;
+- (void)xp_commonInit;
 @end
 
 @interface XPUIViewCreator: NSObject
-+ (id<XPUIView> _Nonnull)createViewWithDelegate:(id<XPUIViewDelegate> _Nullable)delegate;
++ (NSView<XPUIView>* _Nonnull)createViewWithDelegate:(id<XPUIViewDelegate> _Nullable)delegate;
 @end

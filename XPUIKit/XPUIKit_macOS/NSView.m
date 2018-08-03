@@ -41,10 +41,10 @@ static char kXPUIViewDelegateKey;
 {
     void(^commonInit)(id<AspectInfo>) = ^void(id<AspectInfo> aspectInfo){
         NSView<XPUIView>* view = [aspectInfo instance];
-            [view setWantsLayer:YES];
-            [view setTranslatesAutoresizingMaskIntoConstraints:NO];
-            UILayoutGuide* lg = [[UILayoutGuide alloc] initWithOwningView:view];
-            objc_setAssociatedObject(view, &kLayoutGuideAssociationKey, lg, OBJC_ASSOCIATION_RETAIN);
+        objc_setAssociatedObject(view,
+                                 &kLayoutGuideAssociationKey,
+                                 [[UILayoutGuide alloc] initWithOwningView:view],
+                                 OBJC_ASSOCIATION_RETAIN);
     };
     [NSView aspect_hookSelector:@selector(init)
                     withOptions:AspectPositionAfter
@@ -89,7 +89,9 @@ static char kXPUIViewDelegateKey;
 
 - (UILayoutGuide* _Nonnull)xp_layoutGuide;
 {
-    return objc_getAssociatedObject(self, &kLayoutGuideAssociationKey);
+    id obj = objc_getAssociatedObject(self, &kLayoutGuideAssociationKey);
+    NSLog(@"LayoutGuide: %@ for View: %@", obj, self);
+    return obj;
 }
 
 - (id<XPUIViewDelegate>)xp_delegate;
@@ -101,13 +103,19 @@ static char kXPUIViewDelegateKey;
 {
     objc_setAssociatedObject(self, &kXPUIViewDelegateKey, delegate, OBJC_ASSOCIATION_RETAIN);
 }
+- (void)xp_commonInit;
+{
+    [self setWantsLayer:YES];
+    [self setTranslatesAutoresizingMaskIntoConstraints:NO];
+}
 
 @end
 
 @implementation XPUIViewCreator
-+ (id<XPUIView> _Nonnull)createViewWithDelegate:(id<XPUIViewDelegate> _Nullable)delegate;
++ (NSView<XPUIView>* _Nonnull)createViewWithDelegate:(id<XPUIViewDelegate> _Nullable)delegate;
 {
     id view = [[NSView alloc] init];
+    [view xp_commonInit];
     [view setXp_delegate:delegate];
     return view;
 }

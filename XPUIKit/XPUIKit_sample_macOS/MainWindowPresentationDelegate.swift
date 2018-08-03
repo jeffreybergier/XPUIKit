@@ -32,7 +32,25 @@ import XPUIKit
 
 class MainWindowPresentationDelegate {
     let blueSubview = XPUIViewCreator.createView(with: nil)
-    let label = XPUILabelCreator.createLabel(with: nil)
+    let label1: NSView & XPUILabel = {
+        let l = XPUILabelCreator.createLabel(with: nil)
+        l.xp_singleLineMode = false
+        l.xp_attributedString = NSAttributedString(string: "2018-08-02 22:32:42.388420-0700 XPUIKit Sample[68862:1901826] [User Defaults] Couldn't read values in CFPrefsPlistSource<0x6000000e6f00> (Domain: com.apple.PowerManagement, User: kCFPreferencesAnyUser, ByHost: Yes, Container: (null), Contents Need Refresh: Yes): accessing preferences outside an application's container requires user-preference-read or file-read-data sandbox access, detaching from cfprefsd")
+        return l
+    }()
+    let label2: NSView & XPUILabel = {
+        let l = XPUILabelCreator.createLabel(with: nil)
+        l.xp_singleLineMode = false
+        l.xp_attributedString = NSAttributedString(string: "– – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – – –")
+        return l
+    }()
+    let stack: XPUIStackView = {
+        let s = XPUIStackViewCreator.createStackView(with: nil)
+        s.orientation = .horizontal
+        s.distribution = .fillEqually
+        s.xp_layer.backgroundColor = CGColor(red: 0, green: 1, blue: 0, alpha: 1)
+        return s
+    }()
 }
 
 extension MainWindowPresentationDelegate: XPUIPresentationDelegate {
@@ -59,20 +77,20 @@ extension MainWindowPresentationDelegate: XPUIViewDelegate {
         print("View: viewDidMoveToPresentation")
         view.xp_layer.backgroundColor = CGColor(red: 1, green: 0, blue: 0, alpha: 1)
         view.xp_addSubview(self.blueSubview)
-        self.blueSubview.xp_addSubview(self.label)
         self.blueSubview.xp_layer.backgroundColor = CGColor(red: 0, green: 0, blue: 1, alpha: 1)
+        self.blueSubview.xp_addSubview(self.stack)
         NSLayoutConstraint.activate([
-            self.label.xp_layoutGuide.leadingAnchor.constraint(equalTo: self.blueSubview.xp_layoutGuide.leadingAnchor, constant: 50),
-            self.blueSubview.xp_layoutGuide.trailingAnchor.constraint(equalTo: self.label.xp_layoutGuide.trailingAnchor, constant: 50),
-            self.label.xp_layoutGuide.topAnchor.constraint(equalTo: self.blueSubview.xp_layoutGuide.topAnchor, constant: 50),
-            self.blueSubview.xp_layoutGuide.bottomAnchor.constraint(greaterThanOrEqualTo: self.label.xp_layoutGuide.bottomAnchor, constant: 50),
+            self.stack.xp_layoutGuide.leadingAnchor.constraint(equalTo: self.blueSubview.xp_layoutGuide.leadingAnchor, constant: 50),
+            self.blueSubview.xp_layoutGuide.trailingAnchor.constraint(equalTo: self.stack.xp_layoutGuide.trailingAnchor, constant: 50),
+            self.stack.xp_layoutGuide.topAnchor.constraint(equalTo: self.blueSubview.xp_layoutGuide.topAnchor, constant: 50),
+            self.blueSubview.xp_layoutGuide.bottomAnchor.constraint(greaterThanOrEqualTo: self.stack.xp_layoutGuide.bottomAnchor, constant: 50),
             self.blueSubview.xp_layoutGuide.leadingAnchor.constraint(equalTo: view.xp_layoutGuide.leadingAnchor, constant: 100),
             view.xp_layoutGuide.trailingAnchor.constraint(equalTo: self.blueSubview.xp_layoutGuide.trailingAnchor, constant: 100),
             self.blueSubview.xp_layoutGuide.topAnchor.constraint(equalTo: view.xp_layoutGuide.topAnchor, constant: 100),
             view.xp_layoutGuide.bottomAnchor.constraint(equalTo: self.blueSubview.xp_layoutGuide.bottomAnchor, constant: 100),
             ])
-        self.label.xp_singleLineMode = false
-        self.label.xp_attributedString = NSAttributedString(string: "2018-08-02 22:32:42.388420-0700 XPUIKit Sample[68862:1901826] [User Defaults] Couldn't read values in CFPrefsPlistSource<0x6000000e6f00> (Domain: com.apple.PowerManagement, User: kCFPreferencesAnyUser, ByHost: Yes, Container: (null), Contents Need Refresh: Yes): accessing preferences outside an application's container requires user-preference-read or file-read-data sandbox access, detaching from cfprefsd")
+        self.stack.xp_addArrangedSubview(self.label1)
+        self.stack.xp_addArrangedSubview(self.label2)
     }
 
     func viewDidLayout(_ view: XPUIView) {
