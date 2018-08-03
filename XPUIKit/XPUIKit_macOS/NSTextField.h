@@ -9,7 +9,7 @@
 #import "XPUIView.h"
 
 @interface NSTextField (XPUI) <XPUILabel>
-
+@property (nonatomic, strong) NSAttributedString* _Nullable xp_attributedString;
 @end
 
 @interface XPUILabelCreator: NSObject
