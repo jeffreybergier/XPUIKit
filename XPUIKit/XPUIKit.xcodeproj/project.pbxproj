@@ -36,10 +36,6 @@
 		50147CA72113DACD00788F19 /* NSTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 50147CA52113DACD00788F19 /* NSTextField.m */; };
 		504577832114DB2400BCA319 /* Typedefs.h in Headers */ = {isa = PBXBuildFile; fileRef = 504577822114DB2400BCA319 /* Typedefs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		504577842114DB2400BCA319 /* Typedefs.h in Headers */ = {isa = PBXBuildFile; fileRef = 504577822114DB2400BCA319 /* Typedefs.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		504577872114E6C800BCA319 /* XPUIStackView.h in Headers */ = {isa = PBXBuildFile; fileRef = 504577852114E6C800BCA319 /* XPUIStackView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		504577882114E6C800BCA319 /* XPUIStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 504577862114E6C800BCA319 /* XPUIStackView.m */; };
-		504577892114E7DD00BCA319 /* XPUIStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 504577862114E6C800BCA319 /* XPUIStackView.m */; };
-		5045778A2114E7E900BCA319 /* XPUIStackView.h in Headers */ = {isa = PBXBuildFile; fileRef = 504577852114E6C800BCA319 /* XPUIStackView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5045778D2114F05D00BCA319 /* NSStackView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5045778B2114F05D00BCA319 /* NSStackView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5045778E2114F05D00BCA319 /* NSStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5045778C2114F05D00BCA319 /* NSStackView.m */; };
 		50B7602221126786001F042F /* XPUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B7601821126786001F042F /* XPUIKit.framework */; };
@@ -117,8 +113,6 @@
 		50147CA42113DACD00788F19 /* NSTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSTextField.h; sourceTree = "<group>"; };
 		50147CA52113DACD00788F19 /* NSTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSTextField.m; sourceTree = "<group>"; };
 		504577822114DB2400BCA319 /* Typedefs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Typedefs.h; sourceTree = "<group>"; };
-		504577852114E6C800BCA319 /* XPUIStackView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPUIStackView.h; sourceTree = "<group>"; };
-		504577862114E6C800BCA319 /* XPUIStackView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPUIStackView.m; sourceTree = "<group>"; };
 		5045778B2114F05D00BCA319 /* NSStackView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSStackView.h; sourceTree = "<group>"; };
 		5045778C2114F05D00BCA319 /* NSStackView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSStackView.m; sourceTree = "<group>"; };
 		50B7601821126786001F042F /* XPUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XPUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -287,8 +281,6 @@
 				50147C92211372BE00788F19 /* XPUIView.h */,
 				50147C882112B6FE00788F19 /* XPUIViewController.h */,
 				50147C802112AEA200788F19 /* XPUIPresentation.h */,
-				504577852114E6C800BCA319 /* XPUIStackView.h */,
-				504577862114E6C800BCA319 /* XPUIStackView.m */,
 			);
 			path = XPUIKit_shared;
 			sourceTree = "<group>";
@@ -342,7 +334,6 @@
 				50147C812112AEA200788F19 /* XPUIPresentation.h in Headers */,
 				50147C94211372BE00788F19 /* XPUIView.h in Headers */,
 				50147C8A2112B6FE00788F19 /* XPUIViewController.h in Headers */,
-				5045778A2114E7E900BCA319 /* XPUIStackView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,7 +346,6 @@
 				50147C95211372BE00788F19 /* XPUIView.h in Headers */,
 				50147C9A2113742700788F19 /* NSView.h in Headers */,
 				50147CA22113A58E00788F19 /* UILayoutGuide.h in Headers */,
-				504577872114E6C800BCA319 /* XPUIStackView.h in Headers */,
 				50B76045211267B0001F042F /* XPUIKit_macOS.h in Headers */,
 				50147C902112B8AA00788F19 /* XPUIViewController_macOS.h in Headers */,
 				50B76059211268BD001F042F /* XPUIKit.h in Headers */,
@@ -718,7 +708,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				504577892114E7DD00BCA319 /* XPUIStackView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -736,7 +725,6 @@
 				50147CA32113A58E00788F19 /* UILayoutGuide.m in Sources */,
 				50147C9B2113742700788F19 /* NSView.m in Sources */,
 				5045778E2114F05D00BCA319 /* NSStackView.m in Sources */,
-				504577882114E6C800BCA319 /* XPUIStackView.m in Sources */,
 				50147CA72113DACD00788F19 /* NSTextField.m in Sources */,
 				50147C912112B8AA00788F19 /* XPUIViewController_macOS.m in Sources */,
 				50147C7E2112AD5900788F19 /* XPUIPresentation_macOS.m in Sources */,

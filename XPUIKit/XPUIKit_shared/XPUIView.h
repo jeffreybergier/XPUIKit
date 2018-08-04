@@ -62,5 +62,11 @@
 @end
 
 @protocol XPUIStackView <XPUIView>
-- (void)xp_addArrangedSubview:(id<XPUIView>)subview;
+@property (nonatomic) CGFloat xp_spacing;
+@property (nonatomic) NSLayoutAttribute xp_alignment;
+@property (nonatomic) NSStackViewDistribution xp_distribution;
+@property (nonatomic) NSUserInterfaceLayoutOrientation xp_orientation;
+- (void)xp_insertArrangedSubview:(id<XPUIView> _Nonnull)view atIndex:(NSUInteger)stackIndex;
+- (void)xp_addArrangedSubview:(id<XPUIView> _Nonnull)subview;
+- (void)xp_removeArrangedSubview:(id<XPUIView> _Nonnull)subview;
 @end

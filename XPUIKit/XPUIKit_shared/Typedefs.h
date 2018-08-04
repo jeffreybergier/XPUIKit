@@ -36,6 +36,5 @@
 #else
 
 @import AppKit;
-typedef NSStackView* XPUIStackViewInstance;
 
 #endif

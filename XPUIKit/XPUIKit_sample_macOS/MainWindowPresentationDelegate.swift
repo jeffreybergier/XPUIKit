@@ -46,8 +46,8 @@ class MainWindowPresentationDelegate {
     }()
     let stack: XPUIStackView = {
         let s = XPUIStackViewCreator.createStackView(with: nil)
-        s.orientation = .horizontal
-        s.distribution = .fillEqually
+        s.xp_orientation = .horizontal
+        s.xp_distribution = .fillEqually
         s.xp_layer.backgroundColor = CGColor(red: 0, green: 1, blue: 0, alpha: 1)
         return s
     }()

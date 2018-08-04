@@ -69,7 +69,7 @@
     [view setEditable:NO];
     [view setBezeled:NO];
     [view setDrawsBackground:YES];
-//    [view setBackgroundColor:[NSColor clearColor]];
+    [view setBackgroundColor:[NSColor clearColor]];
     return view;
 }
 @end

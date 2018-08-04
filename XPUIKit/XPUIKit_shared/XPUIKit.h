@@ -45,7 +45,6 @@ FOUNDATION_EXPORT const unsigned char XPUIKit_macOSVersionString[];
 #endif
 
 #import <XPUIKit/Typedefs.h>
-#import <XPUIKit/XPUIStackView.h>
 #import <XPUIKit/XPUIView.h>
 #import <XPUIKit/XPUIViewController.h>
 #import <XPUIKit/XPUIPresentation.h>
