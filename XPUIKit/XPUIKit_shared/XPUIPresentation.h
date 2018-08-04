@@ -35,7 +35,7 @@
 @protocol XPUIPresentation;
 
 @protocol XPUIPresentationDelegate
-- (id<XPUIViewController> _Nonnull)provideViewControllerForPresentation:(id<XPUIPresentation> _Nonnull)presentation;
+- (void)windowDidLoadInPresentation:(id<XPUIPresentation> _Nonnull)presentation;
 @end
 
 @protocol XPUIPresentation // NSWindowController and UIViewController (when used for presentation)

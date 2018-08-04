@@ -31,11 +31,12 @@
 @import AppKit;
 #import "XPUIPresentation.h"
 
-@interface XPUIPresentation_macOS: NSWindowController <XPUIPresentation>
+@interface NSWindowController (XPUI) <XPUIPresentation>
 @property (readonly, nonatomic, strong) id<XPUIViewController> _Nonnull xp_rootViewController;
 @property (nonatomic, strong) id<XPUIPresentationDelegate> _Nullable xp_delegate;
 @end
 
 @interface XPUIPresentationCreator: NSObject
-+ (id<XPUIPresentation> _Nonnull)createPresentationWithDelegate:(id<XPUIPresentationDelegate> _Nonnull)delegate;
++ (id<XPUIPresentation> _Nonnull)createPresentationWithViewController:(id<XPUIViewController> _Nonnull)viewController
+                                                             delegate:(id<XPUIPresentationDelegate> _Nonnull)delegate;
 @end

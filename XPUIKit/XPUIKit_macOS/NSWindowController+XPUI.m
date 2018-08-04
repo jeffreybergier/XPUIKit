@@ -29,27 +29,44 @@
 //
 
 #import "NSWindowController+XPUI.h"
+@import Aspects;
+@import ObjectiveC;
 
-@interface XPUIPresentation_macOS ()
+@implementation NSWindowController (JSB)
 
-@end
+static char kXPUIViewControllerDelegateKey;
 
-@implementation XPUIPresentation_macOS
-
-- (void)windowWillLoad;
++ (void)load;
 {
-    id<XPUIViewController> vc = [[self xp_delegate] provideViewControllerForPresentation:self];
-    [self setContentViewController:vc];
+    [NSWindowController aspect_hookSelector:@selector(windowDidLoad)
+                              withOptions:AspectPositionAfter
+                               usingBlock:^(id<AspectInfo> info)
+     {
+         NSWindowController<XPUIPresentation>* wc = [info instance];
+         [[wc xp_delegate] windowDidLoadInPresentation:wc];
+     } error:nil];
+}
+
+- (id<XPUIPresentationDelegate>)xp_delegate;
+{
+    return objc_getAssociatedObject(self, &kXPUIViewControllerDelegateKey);
+}
+
+- (void)setXp_delegate:(id<XPUIPresentationDelegate>)delegate;
+{
+    objc_setAssociatedObject(self, &kXPUIViewControllerDelegateKey, delegate, OBJC_ASSOCIATION_RETAIN);
 }
 
 @end
 
 @implementation XPUIPresentationCreator: NSObject
-+ (id<XPUIPresentation> _Nonnull)createPresentationWithDelegate:(id<XPUIPresentationDelegate> _Nonnull)delegate;
++ (id<XPUIPresentation> _Nonnull)createPresentationWithViewController:(id<XPUIViewController> _Nonnull)viewController
+                                                             delegate:(id<XPUIPresentationDelegate> _Nonnull)delegate;
 {
-    NSWindowController<XPUIPresentation>* wc = [[XPUIPresentation_macOS alloc] initWithWindowNibName:@"WindowControllerDefault"];
+    NSWindow* window = [NSWindow windowWithContentViewController:viewController];
+    NSWindowController<XPUIPresentation>* wc = [[NSWindowController alloc] initWithWindow:window];
     [wc setXp_delegate:delegate];
-    [wc showWindow:nil];
+    [wc showWindow:delegate];
     return wc;
 }
 @end

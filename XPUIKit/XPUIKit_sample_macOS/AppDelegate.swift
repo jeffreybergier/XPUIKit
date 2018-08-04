@@ -38,7 +38,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         let delegate = MainWindowPresentationDelegate()
-        self.windowController = XPUIPresentationCreator.createPresentation(with: delegate)
+        let vc = XPUIViewControllerCreator.createViewController(with: delegate)
+        self.windowController = XPUIPresentationCreator.createPresentation(with: vc, delegate: delegate)
     }
 }
 

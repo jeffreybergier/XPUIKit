@@ -33,6 +33,7 @@
 
 @interface NSViewController (XPUI) <XPUIViewController>
 @property (nonatomic, strong) id<XPUIViewControllerDelegate> _Nullable xp_delegate;
+@property (nonatomic, copy) NSString* _Nullable xp_title;
 @end
 
 @interface XPUIViewControllerCreator: NSObject

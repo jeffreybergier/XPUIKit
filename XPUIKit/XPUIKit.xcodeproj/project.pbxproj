@@ -18,7 +18,6 @@
 		50147C782112ABEA00788F19 /* XPUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50B76035211267B0001F042F /* XPUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		50147C7D2112AD5900788F19 /* NSWindowController+XPUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 50147C7A2112AD5900788F19 /* NSWindowController+XPUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50147C7E2112AD5900788F19 /* NSWindowController+XPUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 50147C7B2112AD5900788F19 /* NSWindowController+XPUI.m */; };
-		50147C7F2112AD5900788F19 /* WindowControllerDefault.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50147C7C2112AD5900788F19 /* WindowControllerDefault.xib */; };
 		50147C812112AEA200788F19 /* XPUIPresentation.h in Headers */ = {isa = PBXBuildFile; fileRef = 50147C802112AEA200788F19 /* XPUIPresentation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50147C822112AEA200788F19 /* XPUIPresentation.h in Headers */ = {isa = PBXBuildFile; fileRef = 50147C802112AEA200788F19 /* XPUIPresentation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50147C872112B33F00788F19 /* MainWindowPresentationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50147C862112B33F00788F19 /* MainWindowPresentationDelegate.swift */; };
@@ -99,7 +98,6 @@
 		50147C712112AB6F00788F19 /* XPUIKit_sample_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XPUIKit_sample_macOS.entitlements; sourceTree = "<group>"; };
 		50147C7A2112AD5900788F19 /* NSWindowController+XPUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSWindowController+XPUI.h"; sourceTree = "<group>"; };
 		50147C7B2112AD5900788F19 /* NSWindowController+XPUI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSWindowController+XPUI.m"; sourceTree = "<group>"; };
-		50147C7C2112AD5900788F19 /* WindowControllerDefault.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WindowControllerDefault.xib; sourceTree = "<group>"; };
 		50147C802112AEA200788F19 /* XPUIPresentation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPUIPresentation.h; sourceTree = "<group>"; };
 		50147C862112B33F00788F19 /* MainWindowPresentationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowPresentationDelegate.swift; sourceTree = "<group>"; };
 		50147C882112B6FE00788F19 /* XPUIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPUIViewController.h; sourceTree = "<group>"; };
@@ -259,7 +257,6 @@
 				50147C8F2112B8AA00788F19 /* NSViewController+XPUI.m */,
 				50147C7A2112AD5900788F19 /* NSWindowController+XPUI.h */,
 				50147C7B2112AD5900788F19 /* NSWindowController+XPUI.m */,
-				50147C7C2112AD5900788F19 /* WindowControllerDefault.xib */,
 				50B76038211267B0001F042F /* Info.plist */,
 			);
 			path = XPUIKit_macOS;
@@ -534,7 +531,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50147C7F2112AD5900788F19 /* WindowControllerDefault.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -54,9 +54,8 @@ class MainWindowPresentationDelegate {
 }
 
 extension MainWindowPresentationDelegate: XPUIPresentationDelegate {
-    func provideViewController(for presentation: XPUIPresentation) -> XPUIViewController {
-        let vc = XPUIViewControllerCreator.createViewController(with: self)
-        return vc
+    func windowDidLoad(in presentation: XPUIPresentation) {
+        
     }
 }
 
@@ -65,6 +64,7 @@ extension MainWindowPresentationDelegate: XPUIViewControllerDelegate {
         return XPUIViewCreator.createView(with: self)
     }
     func viewDidLoad(in controller: XPUIViewController) {
+        controller.xp_title = "Hi There!"
         print("ViewController: ViewDidLoad")
     }
     func viewDidLayoutSubviews(in controller: XPUIViewController) {

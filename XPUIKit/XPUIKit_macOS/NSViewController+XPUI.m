@@ -74,6 +74,14 @@ static char kXPUIViewControllerDelegateKey;
 {
     objc_setAssociatedObject(self, &kXPUIViewControllerDelegateKey, delegate, OBJC_ASSOCIATION_RETAIN);
 }
+- (NSString *)xp_title;
+{
+    return [self title];
+}
+- (void)setXp_title:(NSString *)newValue;
+{
+    [self setTitle:newValue];
+}
 @end
 
 @implementation XPUIViewControllerCreator
