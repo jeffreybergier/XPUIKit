@@ -38,18 +38,6 @@ static char kXPUIViewControllerDelegateKey;
 
 + (void)load;
 {
-    [NSViewController aspect_hookSelector:@selector(loadView)
-                    withOptions:AspectPositionInstead
-                     usingBlock:^(id<AspectInfo> info)
-     {
-         NSViewController<XPUIViewController>* vc = [info instance];
-         id<XPUIViewControllerDelegate> delegate = [vc xp_delegate];
-         if ([vc conformsToProtocol:@protocol(XPUIViewController)] && delegate) {
-             [vc setView:[delegate provideViewForController:vc]];
-         } else {
-             [[info originalInvocation] invoke]; // just do the original thing
-         }
-     } error:nil];
     [NSViewController aspect_hookSelector:@selector(viewDidLayout)
                     withOptions:AspectPositionAfter
                      usingBlock:^(id<AspectInfo> info)
@@ -85,10 +73,12 @@ static char kXPUIViewControllerDelegateKey;
 @end
 
 @implementation XPUIViewControllerCreator
-+ (id<XPUIViewController> _Nonnull)createViewControllerWithDelegate:(id<XPUIViewControllerDelegate> _Nonnull)delegate;
++ (id<XPUIViewController> _Nonnull)createViewControllerWithRootView:(id<XPUIView>)rootView
+                                                           delegate:(id<XPUIViewControllerDelegate> _Nonnull)delegate;
 {
-    id<XPUIViewController> vc = [[NSViewController alloc] initWithNibName:nil bundle:nil];
+    NSViewController<XPUIViewController>* vc = [[NSViewController alloc] initWithNibName:nil bundle:nil];
     [vc setXp_delegate:delegate];
+    [vc setView:rootView];
     return vc;
 }
 @end

@@ -60,9 +60,6 @@ extension MainWindowPresentationDelegate: XPUIPresentationDelegate {
 }
 
 extension MainWindowPresentationDelegate: XPUIViewControllerDelegate {
-    func provideView(for controller: XPUIViewController) -> XPUIView {
-        return XPUIViewCreator.createView(with: self)
-    }
     func viewDidLoad(in controller: XPUIViewController) {
         controller.xp_title = "Hi There!"
         print("ViewController: ViewDidLoad")

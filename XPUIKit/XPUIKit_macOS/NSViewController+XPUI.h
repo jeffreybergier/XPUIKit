@@ -37,5 +37,6 @@
 @end
 
 @interface XPUIViewControllerCreator: NSObject
-+ (id<XPUIViewController> _Nonnull)createViewControllerWithDelegate:(id<XPUIViewControllerDelegate> _Nonnull)delegate;
++ (id<XPUIViewController> _Nonnull)createViewControllerWithRootView:(id<XPUIView>)rootView
+                                                           delegate:(id<XPUIViewControllerDelegate> _Nonnull)delegate;
 @end

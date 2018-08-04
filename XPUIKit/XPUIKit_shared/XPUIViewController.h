@@ -35,7 +35,6 @@
 @protocol XPUIViewControllerDelegate;
 
 @protocol XPUIViewControllerDelegate
-- (id<XPUIView> _Nonnull)provideViewForController:(id<XPUIViewController> _Nonnull)controller;
 - (void)viewDidLoadInController:(id<XPUIViewController> _Nonnull)controller;
 - (void)viewDidLayoutSubviewsInController:(id<XPUIViewController> _Nonnull)controller;
 @end

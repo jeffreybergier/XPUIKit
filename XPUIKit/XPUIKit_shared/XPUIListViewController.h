@@ -30,6 +30,7 @@
 //
 
 @import Foundation;
+#import "XPUIViewController.h"
 
 @protocol XPUIListViewControllerDelegate;
 @protocol XPUIListViewController;
@@ -37,6 +38,6 @@
 @protocol XPUIListViewControllerDelegate
 @end
 
-@protocol XPUIListViewController
+@protocol XPUIListViewController <XPUIViewController>
 @property (nonatomic, strong) id<XPUIListViewControllerDelegate> _Nullable xp_delegate;
 @end

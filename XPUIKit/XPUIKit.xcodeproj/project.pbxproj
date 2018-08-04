@@ -42,6 +42,7 @@
 		504577942116370E00BCA319 /* ListViewController_macOS.xib in Resources */ = {isa = PBXBuildFile; fileRef = 504577912116370E00BCA319 /* ListViewController_macOS.xib */; };
 		504577962116386500BCA319 /* XPUIListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 504577952116386500BCA319 /* XPUIListViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		504577972116386500BCA319 /* XPUIListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 504577952116386500BCA319 /* XPUIListViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5045779921163FC200BCA319 /* TableViewWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5045779821163FC200BCA319 /* TableViewWindow.swift */; };
 		50B7602221126786001F042F /* XPUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B7601821126786001F042F /* XPUIKit.framework */; };
 		50B7602921126786001F042F /* XPUIKit_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B7601B21126786001F042F /* XPUIKit_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50B7603E211267B0001F042F /* XPUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B76035211267B0001F042F /* XPUIKit.framework */; };
@@ -122,6 +123,7 @@
 		504577902116370E00BCA319 /* ListViewController_macOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewController_macOS.m; sourceTree = "<group>"; };
 		504577912116370E00BCA319 /* ListViewController_macOS.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewController_macOS.xib; sourceTree = "<group>"; };
 		504577952116386500BCA319 /* XPUIListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPUIListViewController.h; sourceTree = "<group>"; };
+		5045779821163FC200BCA319 /* TableViewWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewWindow.swift; sourceTree = "<group>"; };
 		50B7601821126786001F042F /* XPUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XPUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50B7601B21126786001F042F /* XPUIKit_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPUIKit_iOS.h; sourceTree = "<group>"; };
 		50B7601C21126786001F042F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			children = (
 				50147C692112AB6D00788F19 /* AppDelegate.swift */,
 				50147C862112B33F00788F19 /* MainWindowPresentationDelegate.swift */,
+				5045779821163FC200BCA319 /* TableViewWindow.swift */,
 				50147C6B2112AB6F00788F19 /* Assets.xcassets */,
 				50147C6D2112AB6F00788F19 /* MainMenu.xib */,
 				50147C702112AB6F00788F19 /* Info.plist */,
@@ -713,6 +716,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50147C6A2112AB6D00788F19 /* AppDelegate.swift in Sources */,
+				5045779921163FC200BCA319 /* TableViewWindow.swift in Sources */,
 				50147C872112B33F00788F19 /* MainWindowPresentationDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

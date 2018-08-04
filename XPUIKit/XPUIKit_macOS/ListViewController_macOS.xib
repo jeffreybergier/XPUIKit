@@ -8,6 +8,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="ListViewController_macOS" customModule="XPUIKit" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="xNI-CR-yHa" id="Wri-9S-lsO"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>

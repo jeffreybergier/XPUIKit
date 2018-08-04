@@ -31,6 +31,10 @@
 @import AppKit;
 #import "XPUIListViewController.h"
 
-@interface ListViewController_macOS: NSViewController
+@interface ListViewController_macOS: NSViewController <XPUIListViewController>
+@property (nonatomic, strong) id<XPUIListViewControllerDelegate> _Nullable xp_delegate;
+@end
 
+@interface XPUIListViewControllerCreator: NSObject
++ (id<XPUIListViewController> _Nonnull)createListViewControllerWithDelegate:(id<XPUIListViewControllerDelegate> _Nonnull)delegate;
 @end
