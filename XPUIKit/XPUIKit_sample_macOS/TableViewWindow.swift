@@ -29,5 +29,10 @@ extension TableViewControllerDelegate: XPUIViewControllerDelegate {
 }
 
 extension TableViewControllerDelegate: XPUIListViewControllerDelegate {
-
+    func cellForRow(at index: Int, in listVC: XPUIListViewController) -> XPUIView {
+        return XPUIViewCreator.createView(with: nil)
+    }
+    func numberOfRows(in listVC: XPUIListViewController) -> Int {
+        return 10
+    }
 }

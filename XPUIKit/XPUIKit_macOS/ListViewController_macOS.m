@@ -7,13 +7,34 @@
 
 #import "ListViewController_macOS.h"
 
-@interface ListViewController_macOS ()
+@interface ListViewController_macOS () <NSTableViewDataSource, NSTableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet NSTableView* tableView;
 
 @end
 
 @implementation ListViewController_macOS
+
+- (void)viewDidLoad;
+{
+    [super viewDidLoad];
+    [[self tableView] setDataSource:self];
+    [[self tableView] setDelegate:self];
+}
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView;
+{
+    return [[self xp_delegate] numberOfRowsInListViewController:self];
+}
+- (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row;
+{
+    return [[self xp_delegate] cellForRowAtIndex:row inListViewController:self];
+}
+- (NSTableRowView *)tableView:(NSTableView *)tableView rowViewForRow:(NSInteger)row;
+{
+    return nil;
+}
+
+
 
 @end
 

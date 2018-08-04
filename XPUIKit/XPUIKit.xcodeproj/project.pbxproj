@@ -267,11 +267,11 @@
 				50147C992113742700788F19 /* NSView+XPUI.m */,
 				50147C8E2112B8AA00788F19 /* NSViewController+XPUI.h */,
 				50147C8F2112B8AA00788F19 /* NSViewController+XPUI.m */,
-				50147C7A2112AD5900788F19 /* NSWindowController+XPUI.h */,
-				50147C7B2112AD5900788F19 /* NSWindowController+XPUI.m */,
 				5045778F2116370E00BCA319 /* ListViewController_macOS.h */,
 				504577902116370E00BCA319 /* ListViewController_macOS.m */,
 				504577912116370E00BCA319 /* ListViewController_macOS.xib */,
+				50147C7A2112AD5900788F19 /* NSWindowController+XPUI.h */,
+				50147C7B2112AD5900788F19 /* NSWindowController+XPUI.m */,
 				50B76038211267B0001F042F /* Info.plist */,
 			);
 			path = XPUIKit_macOS;
@@ -1305,7 +1305,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1380,7 +1380,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.saturdayapps.XPUIKit-macOS";

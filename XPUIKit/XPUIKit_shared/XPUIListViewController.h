@@ -36,6 +36,8 @@
 @protocol XPUIListViewController;
 
 @protocol XPUIListViewControllerDelegate
+- (NSInteger)numberOfRowsInListViewController:(id<XPUIListViewController> _Nonnull)listVC;
+- (id<XPUIView> _Nonnull)cellForRowAtIndex:(NSInteger)index inListViewController:(id<XPUIListViewController> _Nonnull)listVC;
 @end
 
 @protocol XPUIListViewController <XPUIViewController>
