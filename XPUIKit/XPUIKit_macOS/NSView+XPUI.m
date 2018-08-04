@@ -67,14 +67,6 @@ static char kXPUIViewDelegateKey;
          NSView<XPUIView>* v = [info instance];
          [[v xp_delegate] viewDidLayout:v];
      } error:nil];
-//    [NSView aspect_hookSelector:@selector(requiresConstraintBasedLayout)
-//                    withOptions:AspectPositionInstead
-//                     usingBlock:^(id<AspectInfo> info)
-//     {
-//         NSInvocation* invocation = [info originalInvocation];
-//         BOOL answer = YES;
-//         [invocation setReturnValue:&answer];
-//     } error:nil];
 }
 
 - (CALayer *)xp_layer;
@@ -89,9 +81,7 @@ static char kXPUIViewDelegateKey;
 
 - (UILayoutGuide* _Nonnull)xp_layoutGuide;
 {
-    id obj = objc_getAssociatedObject(self, &kLayoutGuideAssociationKey);
-    NSLog(@"LayoutGuide: %@ for View: %@", obj, self);
-    return obj;
+    return objc_getAssociatedObject(self, &kLayoutGuideAssociationKey);
 }
 
 - (id<XPUIViewDelegate>)xp_delegate;

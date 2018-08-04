@@ -34,13 +34,14 @@ import XPUIKit
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    private var windowController: XPUIPresentation!
+    private let plainPresentationDelegate = PlainPresentation()
+    private let tableViewPresentationDelegate = TableViewControllerDelegate()
+    private var plainPresentation: XPUIPresentation?
+    private var tableViewPresentation: XPUIPresentation?
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        let delegate = MainWindowPresentationDelegate()
-        let view = XPUIViewCreator.createView(with: delegate)
-        let vc = XPUIViewControllerCreator.createViewController(withRootView: view, delegate: delegate)
-        self.windowController = XPUIPresentationCreator.createPresentation(with: vc, delegate: delegate)
+//        self.plainPresentation = self.plainPresentationDelegate.showPresentation()
+        self.tableViewPresentation = self.tableViewPresentationDelegate.showPresentation()
     }
 }
 

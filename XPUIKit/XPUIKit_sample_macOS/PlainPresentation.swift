@@ -30,7 +30,14 @@
 
 import XPUIKit
 
-class MainWindowPresentationDelegate {
+class PlainPresentation {
+
+    func showPresentation() -> XPUIPresentation {
+        let view = XPUIViewCreator.createView(with: self)
+        let vc = XPUIViewControllerCreator.createViewController(withRootView: view, delegate: self)
+        return XPUIPresentationCreator.createPresentation(with: vc, delegate: self)
+    }
+
     let blueSubview = XPUIViewCreator.createView(with: nil)
     let label1: NSView & XPUILabel = {
         let l = XPUILabelCreator.createLabel(with: nil)
@@ -53,13 +60,11 @@ class MainWindowPresentationDelegate {
     }()
 }
 
-extension MainWindowPresentationDelegate: XPUIPresentationDelegate {
-    func windowDidLoad(in presentation: XPUIPresentation) {
-        
-    }
+extension PlainPresentation: XPUIPresentationDelegate {
+
 }
 
-extension MainWindowPresentationDelegate: XPUIViewControllerDelegate {
+extension PlainPresentation: XPUIViewControllerDelegate {
     func viewDidLoad(in controller: XPUIViewController) {
         controller.xp_title = "Hi There!"
         print("ViewController: ViewDidLoad")
@@ -69,7 +74,7 @@ extension MainWindowPresentationDelegate: XPUIViewControllerDelegate {
     }
 }
 
-extension MainWindowPresentationDelegate: XPUIViewDelegate {
+extension PlainPresentation: XPUIViewDelegate {
     func viewDidMove(toPresentation view: XPUIView) {
         print("View: viewDidMoveToPresentation")
         view.xp_layer.backgroundColor = CGColor(red: 1, green: 0, blue: 0, alpha: 1)

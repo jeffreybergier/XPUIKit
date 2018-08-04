@@ -36,17 +36,6 @@
 
 static char kXPUIViewControllerDelegateKey;
 
-+ (void)load;
-{
-    [NSWindowController aspect_hookSelector:@selector(windowDidLoad)
-                              withOptions:AspectPositionAfter
-                               usingBlock:^(id<AspectInfo> info)
-     {
-         NSWindowController<XPUIPresentation>* wc = [info instance];
-         [[wc xp_delegate] windowDidLoadInPresentation:wc];
-     } error:nil];
-}
-
 - (id<XPUIPresentationDelegate>)xp_delegate;
 {
     return objc_getAssociatedObject(self, &kXPUIViewControllerDelegateKey);
