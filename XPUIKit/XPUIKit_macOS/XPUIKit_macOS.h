@@ -37,9 +37,9 @@ FOUNDATION_EXPORT double XPUIKit_macOSVersionNumber;
 FOUNDATION_EXPORT const unsigned char XPUIKit_macOSVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <XPUIKit_macOS/PublicHeader.h>
-#import <XPUIKit/NSStackView.h>
-#import <XPUIKit/NSTextField.h>
-#import <XPUIKit/NSView.h>
-#import <XPUIKit/XPUIViewController_macOS.h>
-#import <XPUIKit/XPUIPresentation_macOS.h>
+#import <XPUIKit/NSStackView+XPUI.h>
+#import <XPUIKit/NSTextField+XPUI.h>
+#import <XPUIKit/NSView+XPUI.h>
+#import <XPUIKit/NSViewController+XPUI.h>
+#import <XPUIKit/NSWindowController+XPUI.h>
 

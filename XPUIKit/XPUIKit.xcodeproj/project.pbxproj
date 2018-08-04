@@ -16,28 +16,28 @@
 		50147C6F2112AB6F00788F19 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50147C6D2112AB6F00788F19 /* MainMenu.xib */; };
 		50147C772112ABEA00788F19 /* XPUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B76035211267B0001F042F /* XPUIKit.framework */; };
 		50147C782112ABEA00788F19 /* XPUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50B76035211267B0001F042F /* XPUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		50147C7D2112AD5900788F19 /* XPUIPresentation_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 50147C7A2112AD5900788F19 /* XPUIPresentation_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		50147C7E2112AD5900788F19 /* XPUIPresentation_macOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 50147C7B2112AD5900788F19 /* XPUIPresentation_macOS.m */; };
-		50147C7F2112AD5900788F19 /* XPUIPresentation_macOS.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50147C7C2112AD5900788F19 /* XPUIPresentation_macOS.xib */; };
+		50147C7D2112AD5900788F19 /* NSWindowController+XPUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 50147C7A2112AD5900788F19 /* NSWindowController+XPUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50147C7E2112AD5900788F19 /* NSWindowController+XPUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 50147C7B2112AD5900788F19 /* NSWindowController+XPUI.m */; };
+		50147C7F2112AD5900788F19 /* WindowControllerDefault.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50147C7C2112AD5900788F19 /* WindowControllerDefault.xib */; };
 		50147C812112AEA200788F19 /* XPUIPresentation.h in Headers */ = {isa = PBXBuildFile; fileRef = 50147C802112AEA200788F19 /* XPUIPresentation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50147C822112AEA200788F19 /* XPUIPresentation.h in Headers */ = {isa = PBXBuildFile; fileRef = 50147C802112AEA200788F19 /* XPUIPresentation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50147C872112B33F00788F19 /* MainWindowPresentationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50147C862112B33F00788F19 /* MainWindowPresentationDelegate.swift */; };
 		50147C8A2112B6FE00788F19 /* XPUIViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 50147C882112B6FE00788F19 /* XPUIViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50147C8B2112B6FE00788F19 /* XPUIViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 50147C882112B6FE00788F19 /* XPUIViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		50147C902112B8AA00788F19 /* XPUIViewController_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 50147C8E2112B8AA00788F19 /* XPUIViewController_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		50147C912112B8AA00788F19 /* XPUIViewController_macOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 50147C8F2112B8AA00788F19 /* XPUIViewController_macOS.m */; };
+		50147C902112B8AA00788F19 /* NSViewController+XPUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 50147C8E2112B8AA00788F19 /* NSViewController+XPUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50147C912112B8AA00788F19 /* NSViewController+XPUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 50147C8F2112B8AA00788F19 /* NSViewController+XPUI.m */; };
 		50147C94211372BE00788F19 /* XPUIView.h in Headers */ = {isa = PBXBuildFile; fileRef = 50147C92211372BE00788F19 /* XPUIView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50147C95211372BE00788F19 /* XPUIView.h in Headers */ = {isa = PBXBuildFile; fileRef = 50147C92211372BE00788F19 /* XPUIView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		50147C9A2113742700788F19 /* NSView.h in Headers */ = {isa = PBXBuildFile; fileRef = 50147C982113742700788F19 /* NSView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		50147C9B2113742700788F19 /* NSView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50147C992113742700788F19 /* NSView.m */; };
+		50147C9A2113742700788F19 /* NSView+XPUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 50147C982113742700788F19 /* NSView+XPUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50147C9B2113742700788F19 /* NSView+XPUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 50147C992113742700788F19 /* NSView+XPUI.m */; };
 		50147CA22113A58E00788F19 /* UILayoutGuide.h in Headers */ = {isa = PBXBuildFile; fileRef = 50147CA02113A58E00788F19 /* UILayoutGuide.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50147CA32113A58E00788F19 /* UILayoutGuide.m in Sources */ = {isa = PBXBuildFile; fileRef = 50147CA12113A58E00788F19 /* UILayoutGuide.m */; };
-		50147CA62113DACD00788F19 /* NSTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 50147CA42113DACD00788F19 /* NSTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		50147CA72113DACD00788F19 /* NSTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 50147CA52113DACD00788F19 /* NSTextField.m */; };
+		50147CA62113DACD00788F19 /* NSTextField+XPUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 50147CA42113DACD00788F19 /* NSTextField+XPUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50147CA72113DACD00788F19 /* NSTextField+XPUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 50147CA52113DACD00788F19 /* NSTextField+XPUI.m */; };
 		504577832114DB2400BCA319 /* Typedefs.h in Headers */ = {isa = PBXBuildFile; fileRef = 504577822114DB2400BCA319 /* Typedefs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		504577842114DB2400BCA319 /* Typedefs.h in Headers */ = {isa = PBXBuildFile; fileRef = 504577822114DB2400BCA319 /* Typedefs.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5045778D2114F05D00BCA319 /* NSStackView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5045778B2114F05D00BCA319 /* NSStackView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5045778E2114F05D00BCA319 /* NSStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5045778C2114F05D00BCA319 /* NSStackView.m */; };
+		5045778D2114F05D00BCA319 /* NSStackView+XPUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 5045778B2114F05D00BCA319 /* NSStackView+XPUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5045778E2114F05D00BCA319 /* NSStackView+XPUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 5045778C2114F05D00BCA319 /* NSStackView+XPUI.m */; };
 		50B7602221126786001F042F /* XPUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B7601821126786001F042F /* XPUIKit.framework */; };
 		50B7602921126786001F042F /* XPUIKit_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B7601B21126786001F042F /* XPUIKit_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50B7603E211267B0001F042F /* XPUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B76035211267B0001F042F /* XPUIKit.framework */; };
@@ -97,24 +97,24 @@
 		50147C6E2112AB6F00788F19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		50147C702112AB6F00788F19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50147C712112AB6F00788F19 /* XPUIKit_sample_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XPUIKit_sample_macOS.entitlements; sourceTree = "<group>"; };
-		50147C7A2112AD5900788F19 /* XPUIPresentation_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPUIPresentation_macOS.h; sourceTree = "<group>"; };
-		50147C7B2112AD5900788F19 /* XPUIPresentation_macOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPUIPresentation_macOS.m; sourceTree = "<group>"; };
-		50147C7C2112AD5900788F19 /* XPUIPresentation_macOS.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XPUIPresentation_macOS.xib; sourceTree = "<group>"; };
+		50147C7A2112AD5900788F19 /* NSWindowController+XPUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSWindowController+XPUI.h"; sourceTree = "<group>"; };
+		50147C7B2112AD5900788F19 /* NSWindowController+XPUI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSWindowController+XPUI.m"; sourceTree = "<group>"; };
+		50147C7C2112AD5900788F19 /* WindowControllerDefault.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WindowControllerDefault.xib; sourceTree = "<group>"; };
 		50147C802112AEA200788F19 /* XPUIPresentation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPUIPresentation.h; sourceTree = "<group>"; };
 		50147C862112B33F00788F19 /* MainWindowPresentationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowPresentationDelegate.swift; sourceTree = "<group>"; };
 		50147C882112B6FE00788F19 /* XPUIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPUIViewController.h; sourceTree = "<group>"; };
-		50147C8E2112B8AA00788F19 /* XPUIViewController_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPUIViewController_macOS.h; sourceTree = "<group>"; };
-		50147C8F2112B8AA00788F19 /* XPUIViewController_macOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPUIViewController_macOS.m; sourceTree = "<group>"; };
+		50147C8E2112B8AA00788F19 /* NSViewController+XPUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSViewController+XPUI.h"; sourceTree = "<group>"; };
+		50147C8F2112B8AA00788F19 /* NSViewController+XPUI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSViewController+XPUI.m"; sourceTree = "<group>"; };
 		50147C92211372BE00788F19 /* XPUIView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPUIView.h; sourceTree = "<group>"; };
-		50147C982113742700788F19 /* NSView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSView.h; sourceTree = "<group>"; };
-		50147C992113742700788F19 /* NSView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSView.m; sourceTree = "<group>"; };
+		50147C982113742700788F19 /* NSView+XPUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSView+XPUI.h"; sourceTree = "<group>"; };
+		50147C992113742700788F19 /* NSView+XPUI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSView+XPUI.m"; sourceTree = "<group>"; };
 		50147CA02113A58E00788F19 /* UILayoutGuide.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UILayoutGuide.h; sourceTree = "<group>"; };
 		50147CA12113A58E00788F19 /* UILayoutGuide.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UILayoutGuide.m; sourceTree = "<group>"; };
-		50147CA42113DACD00788F19 /* NSTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSTextField.h; sourceTree = "<group>"; };
-		50147CA52113DACD00788F19 /* NSTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSTextField.m; sourceTree = "<group>"; };
+		50147CA42113DACD00788F19 /* NSTextField+XPUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTextField+XPUI.h"; sourceTree = "<group>"; };
+		50147CA52113DACD00788F19 /* NSTextField+XPUI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTextField+XPUI.m"; sourceTree = "<group>"; };
 		504577822114DB2400BCA319 /* Typedefs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Typedefs.h; sourceTree = "<group>"; };
-		5045778B2114F05D00BCA319 /* NSStackView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSStackView.h; sourceTree = "<group>"; };
-		5045778C2114F05D00BCA319 /* NSStackView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSStackView.m; sourceTree = "<group>"; };
+		5045778B2114F05D00BCA319 /* NSStackView+XPUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSStackView+XPUI.h"; sourceTree = "<group>"; };
+		5045778C2114F05D00BCA319 /* NSStackView+XPUI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSStackView+XPUI.m"; sourceTree = "<group>"; };
 		50B7601821126786001F042F /* XPUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XPUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50B7601B21126786001F042F /* XPUIKit_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPUIKit_iOS.h; sourceTree = "<group>"; };
 		50B7601C21126786001F042F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -249,17 +249,17 @@
 				50B76037211267B0001F042F /* XPUIKit_macOS.h */,
 				50147CA02113A58E00788F19 /* UILayoutGuide.h */,
 				50147CA12113A58E00788F19 /* UILayoutGuide.m */,
-				5045778B2114F05D00BCA319 /* NSStackView.h */,
-				5045778C2114F05D00BCA319 /* NSStackView.m */,
-				50147CA42113DACD00788F19 /* NSTextField.h */,
-				50147CA52113DACD00788F19 /* NSTextField.m */,
-				50147C982113742700788F19 /* NSView.h */,
-				50147C992113742700788F19 /* NSView.m */,
-				50147C8E2112B8AA00788F19 /* XPUIViewController_macOS.h */,
-				50147C8F2112B8AA00788F19 /* XPUIViewController_macOS.m */,
-				50147C7A2112AD5900788F19 /* XPUIPresentation_macOS.h */,
-				50147C7B2112AD5900788F19 /* XPUIPresentation_macOS.m */,
-				50147C7C2112AD5900788F19 /* XPUIPresentation_macOS.xib */,
+				5045778B2114F05D00BCA319 /* NSStackView+XPUI.h */,
+				5045778C2114F05D00BCA319 /* NSStackView+XPUI.m */,
+				50147CA42113DACD00788F19 /* NSTextField+XPUI.h */,
+				50147CA52113DACD00788F19 /* NSTextField+XPUI.m */,
+				50147C982113742700788F19 /* NSView+XPUI.h */,
+				50147C992113742700788F19 /* NSView+XPUI.m */,
+				50147C8E2112B8AA00788F19 /* NSViewController+XPUI.h */,
+				50147C8F2112B8AA00788F19 /* NSViewController+XPUI.m */,
+				50147C7A2112AD5900788F19 /* NSWindowController+XPUI.h */,
+				50147C7B2112AD5900788F19 /* NSWindowController+XPUI.m */,
+				50147C7C2112AD5900788F19 /* WindowControllerDefault.xib */,
 				50B76038211267B0001F042F /* Info.plist */,
 			);
 			path = XPUIKit_macOS;
@@ -342,17 +342,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				504577842114DB2400BCA319 /* Typedefs.h in Headers */,
-				50147C7D2112AD5900788F19 /* XPUIPresentation_macOS.h in Headers */,
+				50147C7D2112AD5900788F19 /* NSWindowController+XPUI.h in Headers */,
 				50147C95211372BE00788F19 /* XPUIView.h in Headers */,
-				50147C9A2113742700788F19 /* NSView.h in Headers */,
+				50147C9A2113742700788F19 /* NSView+XPUI.h in Headers */,
 				50147CA22113A58E00788F19 /* UILayoutGuide.h in Headers */,
 				50B76045211267B0001F042F /* XPUIKit_macOS.h in Headers */,
-				50147C902112B8AA00788F19 /* XPUIViewController_macOS.h in Headers */,
+				50147C902112B8AA00788F19 /* NSViewController+XPUI.h in Headers */,
 				50B76059211268BD001F042F /* XPUIKit.h in Headers */,
-				50147CA62113DACD00788F19 /* NSTextField.h in Headers */,
+				50147CA62113DACD00788F19 /* NSTextField+XPUI.h in Headers */,
 				50147C822112AEA200788F19 /* XPUIPresentation.h in Headers */,
 				50147C8B2112B6FE00788F19 /* XPUIViewController.h in Headers */,
-				5045778D2114F05D00BCA319 /* NSStackView.h in Headers */,
+				5045778D2114F05D00BCA319 /* NSStackView+XPUI.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,7 +534,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50147C7F2112AD5900788F19 /* XPUIPresentation_macOS.xib in Resources */,
+				50147C7F2112AD5900788F19 /* WindowControllerDefault.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -723,11 +723,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				50147CA32113A58E00788F19 /* UILayoutGuide.m in Sources */,
-				50147C9B2113742700788F19 /* NSView.m in Sources */,
-				5045778E2114F05D00BCA319 /* NSStackView.m in Sources */,
-				50147CA72113DACD00788F19 /* NSTextField.m in Sources */,
-				50147C912112B8AA00788F19 /* XPUIViewController_macOS.m in Sources */,
-				50147C7E2112AD5900788F19 /* XPUIPresentation_macOS.m in Sources */,
+				50147C9B2113742700788F19 /* NSView+XPUI.m in Sources */,
+				5045778E2114F05D00BCA319 /* NSStackView+XPUI.m in Sources */,
+				50147CA72113DACD00788F19 /* NSTextField+XPUI.m in Sources */,
+				50147C912112B8AA00788F19 /* NSViewController+XPUI.m in Sources */,
+				50147C7E2112AD5900788F19 /* NSWindowController+XPUI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

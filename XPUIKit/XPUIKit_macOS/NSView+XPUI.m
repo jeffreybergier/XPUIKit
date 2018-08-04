@@ -28,7 +28,7 @@
 //
 //
 
-#import "NSView.h"
+#import "NSView+XPUI.h"
 #import "UILayoutGuide.h"
 @import ObjectiveC;
 

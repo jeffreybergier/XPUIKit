@@ -1,5 +1,5 @@
 //
-//  XPUIWindowController.m
+//  XPUIViewController_macOS.m
 //  XPUIKit_macOS
 //
 //  Created by Jeffrey Bergier on 01/08/2018.
@@ -28,28 +28,34 @@
 //
 //
 
-#import "XPUIPresentation_macOS.h"
+#import "NSViewController+XPUI.h"
 
-@interface XPUIPresentation_macOS ()
-
+@interface XPUIViewController_macOS ()
 @end
 
-@implementation XPUIPresentation_macOS
-
-- (void)windowWillLoad;
+@implementation XPUIViewController_macOS
+- (void)loadView;
 {
-    id<XPUIViewController> vc = [[self xp_delegate] provideViewControllerForPresentation:self];
-    [self setContentViewController:vc];
+    id view = [[self xp_delegate] provideViewForController:self];
+    [self setView:view];
 }
-
+- (void)viewDidLoad;
+{
+    [super viewDidLoad];
+    [[self xp_delegate] viewDidLoadInController:self];
+}
+- (void)viewDidLayout;
+{
+    [super viewDidLayout];
+    [[self xp_delegate] viewDidLayoutSubviewsInController:self];
+}
 @end
 
-@implementation XPUIPresentationCreator: NSObject
-+ (id<XPUIPresentation> _Nonnull)createPresentationWithDelegate:(id<XPUIPresentationDelegate> _Nonnull)delegate;
+@implementation XPUIViewControllerCreator
++ (id<XPUIViewController> _Nonnull)createViewControllerWithDelegate:(id<XPUIViewControllerDelegate> _Nonnull)delegate;
 {
-    NSWindowController<XPUIPresentation>* wc = [[XPUIPresentation_macOS alloc] initWithWindowNibName:@"XPUIPresentation_macOS"];
-    [wc setXp_delegate:delegate];
-    [wc showWindow:nil];
-    return wc;
+    NSViewController<XPUIViewController>* vc = [[XPUIViewController_macOS alloc] init];
+    [vc setXp_delegate:delegate];
+    return vc;
 }
 @end

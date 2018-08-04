@@ -28,11 +28,12 @@
 //
 //
 
-#import "NSTextField.h"
+#import "NSTextField+XPUI.h"
 
 @implementation NSTextField (XPUI)
 
-@dynamic xp_singleLineMode;
+@dynamic xp_delegate, xp_layer, xp_layoutGuide;
+
 
 - (BOOL)xp_singleLineMode;
 {

@@ -28,9 +28,12 @@
 //
 //
 
-#import "NSStackView.h"
+#import "NSStackView+XPUI.h"
 
 @implementation NSStackView (XPUI)
+
+@dynamic xp_delegate, xp_layer, xp_layoutGuide;
+
 - (CGFloat)xp_spacing;
 {
     return [self spacing];
