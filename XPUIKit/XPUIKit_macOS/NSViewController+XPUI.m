@@ -29,32 +29,57 @@
 //
 
 #import "NSViewController+XPUI.h"
+@import Aspects;
+@import ObjectiveC;
 
-@interface XPUIViewController_macOS ()
-@end
+@implementation NSViewController (XPUI)
 
-@implementation XPUIViewController_macOS
-- (void)loadView;
+static char kXPUIViewControllerDelegateKey;
+
++ (void)load;
 {
-    id view = [[self xp_delegate] provideViewForController:self];
-    [self setView:view];
+    [NSViewController aspect_hookSelector:@selector(loadView)
+                    withOptions:AspectPositionInstead
+                     usingBlock:^(id<AspectInfo> info)
+     {
+         NSViewController<XPUIViewController>* vc = [info instance];
+         id<XPUIViewControllerDelegate> delegate = [vc xp_delegate];
+         if ([vc conformsToProtocol:@protocol(XPUIViewController)] && delegate) {
+             [vc setView:[delegate provideViewForController:vc]];
+         } else {
+             [[info originalInvocation] invoke]; // just do the original thing
+         }
+     } error:nil];
+    [NSViewController aspect_hookSelector:@selector(viewDidLayout)
+                    withOptions:AspectPositionAfter
+                     usingBlock:^(id<AspectInfo> info)
+     {
+         id<XPUIViewController> v = [info instance];
+         [[v xp_delegate] viewDidLayoutSubviewsInController:v];
+     } error:nil];
+    [NSViewController aspect_hookSelector:@selector(viewDidLoad)
+                    withOptions:AspectPositionAfter
+                     usingBlock:^(id<AspectInfo> info)
+     {
+         id<XPUIViewController> v = [info instance];
+         [[v xp_delegate] viewDidLoadInController:v];
+     } error:nil];
 }
-- (void)viewDidLoad;
+- (id<XPUIViewControllerDelegate>)xp_delegate;
 {
-    [super viewDidLoad];
-    [[self xp_delegate] viewDidLoadInController:self];
+    return objc_getAssociatedObject(self, &kXPUIViewControllerDelegateKey);
 }
-- (void)viewDidLayout;
+
+- (void)setXp_delegate:(id<XPUIViewControllerDelegate>)delegate;
 {
-    [super viewDidLayout];
-    [[self xp_delegate] viewDidLayoutSubviewsInController:self];
+    objc_setAssociatedObject(self, &kXPUIViewControllerDelegateKey, delegate, OBJC_ASSOCIATION_RETAIN);
 }
 @end
 
 @implementation XPUIViewControllerCreator
 + (id<XPUIViewController> _Nonnull)createViewControllerWithDelegate:(id<XPUIViewControllerDelegate> _Nonnull)delegate;
 {
-    NSViewController<XPUIViewController>* vc = [[XPUIViewController_macOS alloc] init];
+    id<XPUIViewController> vc = [[NSViewController alloc] initWithNibName:nil bundle:nil];
     [vc setXp_delegate:delegate];
     return vc;
 }

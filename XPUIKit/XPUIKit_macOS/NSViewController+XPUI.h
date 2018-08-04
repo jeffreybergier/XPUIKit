@@ -31,7 +31,7 @@
 @import AppKit;
 #import "XPUIViewController.h"
 
-@interface XPUIViewController_macOS: NSViewController <XPUIViewController>
+@interface NSViewController (XPUI) <XPUIViewController>
 @property (nonatomic, strong) id<XPUIViewControllerDelegate> _Nullable xp_delegate;
 @end
 
