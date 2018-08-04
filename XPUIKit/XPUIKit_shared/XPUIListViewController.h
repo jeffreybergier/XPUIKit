@@ -1,8 +1,9 @@
 //
-//  Header.h
+//  XPUIListViewController.h
 //  XPUIKit
 //
-//  Created by Jeffrey Bergier on 01/08/2018.
+//  Created by Jeffrey Bergier on 04/08/2018.
+//
 //
 //  MIT License
 //
@@ -30,23 +31,12 @@
 
 @import Foundation;
 
-//! Project version number for XPUIKit_macOS.
-FOUNDATION_EXPORT double XPUIKit_macOSVersionNumber;
+@protocol XPUIListViewControllerDelegate;
+@protocol XPUIListViewController;
 
-//! Project version string for XPUIKit_macOS.
-FOUNDATION_EXPORT const unsigned char XPUIKit_macOSVersionString[];
+@protocol XPUIListViewControllerDelegate
+@end
 
-// In this header, you should import all the public headers of your framework using statements like #import <XPUIKit_macOS/PublicHeader.h>
-
-#if TARGET_OS_IPHONE
-#import <XPUIKit/XPUIKit_iOS.h>
-#else
-#import <XPUIKit/XPUIKit_macOS.h>
-#endif
-
-#import <XPUIKit/Typedefs.h>
-#import <XPUIKit/XPUIView.h>
-#import <XPUIKit/XPUIViewController.h>
-#import <XPUIKit/XPUIPresentation.h>
-#import <XPUIKit/XPUIListViewController.h>
-
+@protocol XPUIListViewController
+@property (nonatomic, strong) id<XPUIListViewControllerDelegate> _Nullable xp_delegate;
+@end
