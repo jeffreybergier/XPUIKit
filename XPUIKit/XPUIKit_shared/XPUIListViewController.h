@@ -31,15 +31,27 @@
 
 @import Foundation;
 #import "XPUIViewController.h"
+#import "XPUIView.h"
 
 @protocol XPUIListViewControllerDelegate;
 @protocol XPUIListViewController;
+@protocol XPUIListCellView;
+@protocol XPUIListCellViewDelegate;
 
 @protocol XPUIListViewControllerDelegate
 - (NSInteger)numberOfRowsInListViewController:(id<XPUIListViewController> _Nonnull)listVC;
-- (id<XPUIView> _Nonnull)cellForRowAtIndex:(NSInteger)index inListViewController:(id<XPUIListViewController> _Nonnull)listVC;
+- (id<XPUIListCellView> _Nonnull)cellForRowAtIndex:(NSInteger)index inListViewController:(id<XPUIListViewController> _Nonnull)listVC;
+- (void)configureListCellView:(id<XPUIListCellView> _Nonnull)cell forRow:(NSInteger)row inListViewController:(id<XPUIListViewController> _Nonnull)listVC;
 @end
 
 @protocol XPUIListViewController <XPUIViewController>
 @property (nonatomic, strong) id<XPUIListViewControllerDelegate> _Nullable xp_delegate;
+@end
+
+@protocol XPUIListCellView <XPUIView>
+@property (nonatomic, strong) id<XPUIListCellViewDelegate> _Nullable xp_delegate;
+@end
+
+@protocol XPUIListCellViewDelegate <XPUIViewDelegate>
+- (void)prepareForReuseOfCell:(id<XPUIListCellView> _Nonnull)cell;
 @end

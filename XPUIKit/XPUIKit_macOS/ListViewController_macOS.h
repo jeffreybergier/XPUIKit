@@ -33,6 +33,7 @@
 
 @interface ListViewController_macOS: NSViewController <XPUIListViewController>
 @property (nonatomic, strong) id<XPUIListViewControllerDelegate> _Nullable xp_delegate;
+@property (weak, nonatomic) IBOutlet NSTableView* tableView;
 @end
 
 @interface XPUIListViewControllerCreator: NSObject

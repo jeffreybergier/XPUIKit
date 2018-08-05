@@ -43,6 +43,8 @@
 		504577962116386500BCA319 /* XPUIListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 504577952116386500BCA319 /* XPUIListViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		504577972116386500BCA319 /* XPUIListViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 504577952116386500BCA319 /* XPUIListViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5045779921163FC200BCA319 /* TableViewWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5045779821163FC200BCA319 /* TableViewWindow.swift */; };
+		5045779C2116541B00BCA319 /* NSTableCellView+XPUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 5045779A2116541B00BCA319 /* NSTableCellView+XPUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5045779D2116541B00BCA319 /* NSTableCellView+XPUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 5045779B2116541B00BCA319 /* NSTableCellView+XPUI.m */; };
 		50B7602221126786001F042F /* XPUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B7601821126786001F042F /* XPUIKit.framework */; };
 		50B7602921126786001F042F /* XPUIKit_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B7601B21126786001F042F /* XPUIKit_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50B7603E211267B0001F042F /* XPUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B76035211267B0001F042F /* XPUIKit.framework */; };
@@ -124,6 +126,8 @@
 		504577912116370E00BCA319 /* ListViewController_macOS.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewController_macOS.xib; sourceTree = "<group>"; };
 		504577952116386500BCA319 /* XPUIListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPUIListViewController.h; sourceTree = "<group>"; };
 		5045779821163FC200BCA319 /* TableViewWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewWindow.swift; sourceTree = "<group>"; };
+		5045779A2116541B00BCA319 /* NSTableCellView+XPUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTableCellView+XPUI.h"; sourceTree = "<group>"; };
+		5045779B2116541B00BCA319 /* NSTableCellView+XPUI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTableCellView+XPUI.m"; sourceTree = "<group>"; };
 		50B7601821126786001F042F /* XPUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XPUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50B7601B21126786001F042F /* XPUIKit_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPUIKit_iOS.h; sourceTree = "<group>"; };
 		50B7601C21126786001F042F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -270,6 +274,8 @@
 				5045778F2116370E00BCA319 /* ListViewController_macOS.h */,
 				504577902116370E00BCA319 /* ListViewController_macOS.m */,
 				504577912116370E00BCA319 /* ListViewController_macOS.xib */,
+				5045779A2116541B00BCA319 /* NSTableCellView+XPUI.h */,
+				5045779B2116541B00BCA319 /* NSTableCellView+XPUI.m */,
 				50147C7A2112AD5900788F19 /* NSWindowController+XPUI.h */,
 				50147C7B2112AD5900788F19 /* NSWindowController+XPUI.m */,
 				50B76038211267B0001F042F /* Info.plist */,
@@ -361,6 +367,7 @@
 				50147C9A2113742700788F19 /* NSView+XPUI.h in Headers */,
 				50147CA22113A58E00788F19 /* UILayoutGuide.h in Headers */,
 				50B76045211267B0001F042F /* XPUIKit_macOS.h in Headers */,
+				5045779C2116541B00BCA319 /* NSTableCellView+XPUI.h in Headers */,
 				50147C902112B8AA00788F19 /* NSViewController+XPUI.h in Headers */,
 				50B76059211268BD001F042F /* XPUIKit.h in Headers */,
 				50147CA62113DACD00788F19 /* NSTextField+XPUI.h in Headers */,
@@ -739,6 +746,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5045779D2116541B00BCA319 /* NSTableCellView+XPUI.m in Sources */,
 				50147CA32113A58E00788F19 /* UILayoutGuide.m in Sources */,
 				50147C9B2113742700788F19 /* NSView+XPUI.m in Sources */,
 				504577932116370E00BCA319 /* ListViewController_macOS.m in Sources */,

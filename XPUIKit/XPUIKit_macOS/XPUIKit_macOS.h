@@ -43,6 +43,7 @@ FOUNDATION_EXPORT const unsigned char XPUIKit_macOSVersionString[];
 #import <XPUIKit/NSViewController+XPUI.h>
 #import <XPUIKit/NSWindowController+XPUI.h>
 #import <XPUIKit/ListViewController_macOS.h>
+#import <XPUIKit/NSTableCellView+XPUI.h>
 
 
 

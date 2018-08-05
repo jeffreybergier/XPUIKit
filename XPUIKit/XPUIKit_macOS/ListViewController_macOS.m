@@ -8,9 +8,6 @@
 #import "ListViewController_macOS.h"
 
 @interface ListViewController_macOS () <NSTableViewDataSource, NSTableViewDelegate>
-
-@property (weak, nonatomic) IBOutlet NSTableView* tableView;
-
 @end
 
 @implementation ListViewController_macOS
@@ -33,8 +30,11 @@
 {
     return nil;
 }
-
-
+- (void)tableView:(NSTableView *)tableView didAddRowView:(NSTableRowView *)rowView forRow:(NSInteger)row;
+{
+    id cell = [tableView viewAtColumn:0 row:row makeIfNecessary:NO];
+    [[self xp_delegate] configureListCellView:cell forRow:row inListViewController:self];
+}
 
 @end
 
