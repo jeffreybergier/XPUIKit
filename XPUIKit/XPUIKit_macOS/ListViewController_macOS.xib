@@ -64,6 +64,9 @@
                                         </prototypeCellViews>
                                     </tableColumn>
                                 </tableColumns>
+                                <connections>
+                                    <action trigger="doubleAction" selector="userDoubleClicked:" target="-2" id="r8P-bd-X5n"/>
+                                </connections>
                             </tableView>
                         </subviews>
                     </clipView>

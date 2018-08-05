@@ -15,6 +15,7 @@
 - (void)viewDidLoad;
 {
     [super viewDidLoad];
+    [[self tableView] setAllowsMultipleSelection:YES];
     [[self tableView] setDataSource:self];
     [[self tableView] setDelegate:self];
 }
@@ -34,6 +35,9 @@
 {
     id cell = [tableView viewAtColumn:0 row:row makeIfNecessary:NO];
     [[self xp_delegate] configureListCellView:cell forRow:row inListViewController:self];
+}
+- (IBAction)userDoubleClicked:(id)sender {
+    [[self xp_delegate] userActivatedIndexes:[[self tableView] selectedRowIndexes] inListViewController:self];
 }
 
 @end

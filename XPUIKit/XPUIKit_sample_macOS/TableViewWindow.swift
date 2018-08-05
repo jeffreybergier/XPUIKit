@@ -98,6 +98,11 @@ extension TableViewControllerDelegate: XPUIViewControllerDelegate {
 }
 
 extension TableViewControllerDelegate: XPUIListViewControllerDelegate {
+
+    func userActivatedIndexes(_ indexSet: IndexSet, in listVC: XPUIListViewController) {
+        NSLog("User Double Clicked: \(indexSet)")
+    }
+
     func configureListCellView(_ cell: XPUIListCellView, forRow row: Int, in listVC: XPUIListViewController) {
         let delegate = cell.xp_delegate as! CellConfigurator
         delegate.label.xp_attributedString = NSAttributedString(string:self.data[row])

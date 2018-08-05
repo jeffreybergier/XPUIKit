@@ -42,6 +42,8 @@
 - (NSInteger)numberOfRowsInListViewController:(id<XPUIListViewController> _Nonnull)listVC;
 - (id<XPUIListCellView> _Nonnull)cellForRowAtIndex:(NSInteger)index inListViewController:(id<XPUIListViewController> _Nonnull)listVC;
 - (void)configureListCellView:(id<XPUIListCellView> _Nonnull)cell forRow:(NSInteger)row inListViewController:(id<XPUIListViewController> _Nonnull)listVC;
+- (void)userActivatedIndexes:(NSIndexSet* _Nonnull)indexSet inListViewController:(id<XPUIListViewController> _Nonnull)listVC;
+
 @end
 
 @protocol XPUIListViewController <XPUIViewController>
